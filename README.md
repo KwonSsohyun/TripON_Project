@@ -20,7 +20,7 @@
 <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"> <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">  
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=aws&logoColor=white">
 
-<br>
+
 
 ### 프론트 언어  
     HTML5  
@@ -29,26 +29,20 @@
     jQuery  
     Bootstrap  
     Ajax  
-
 ### 백엔드 언어  
     Java  
     JSP / Servlet  
-
 ### 데이터베이스  
     Maria DB  
     HeidiSQL  
-
 ### 프레임워크  
     Spring Framework 5.1.6.RELEASE  
     MyBatis  
     Spring Security  
     Maven  
-
 ### 웹서버  
     Apache Tomcat 9  
-
 ### 도메인
     Freenom
-
 ### 호스팅
     AWS EC2
