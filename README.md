@@ -168,8 +168,16 @@ tripON
 │            ├─WEB-INF
 │            │   ├─views
 │            │   │   ├─admin
+│            │   │   │  └─manager_index.jsp
+│            │   │   │  └─ ...
 │            │   │   ├─error
+│            │   │   │  └─error.jsp
 │            │   │   ├─template
+│            │   │   │  └─header.jsp
+│            │   │   │  └─footer.jsp
+│            │   │   │  └─manager_header.jsp
+│            │   │   │  └─manager_footer.jsp
+│            │   │   │  └─ ...
 │            │   │   ├─faqPage.jsp
 │            │   |   ├─findID.jsp
 │            │   |   ├─findID2.jsp
