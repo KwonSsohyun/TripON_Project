@@ -15,8 +15,8 @@ public class PhoneService {
 		
 		System.out.println("실제 전송로직 : " + userPhoneNumber);
 		
-		String api_key = "NCSEO8ZYO1AT1FQO";                    // "COOLSMS에서 발급받은 키"
-		String api_secret = "GMW0K2BHHWGU3LSWG6KNVDCDVVDKUO3G"; // "COOLSMS에서 발급받은 값"
+		String api_key = "COOLSMS에서 발급받은 키";                    // "COOLSMS에서 발급받은 키"
+		String api_secret = "COOLSMS에서 발급받은 값";                 // "COOLSMS에서 발급받은 값"
 		
 		Message coolsms = new Message(api_key, api_secret);
 		
