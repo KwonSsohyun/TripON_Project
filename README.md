@@ -121,94 +121,95 @@
 <details>
     <summary>디렉토리 상세</summary>
     <div markdown="1">
-```
-tripON
-├── src
-│   └─main
-│        ├─java
-│        │  └─com
-│        │      ├─tripon
-│        │         ├──biz
-│        │         │  ├─activity
-│        │         │  │  └─impl
-│        │         │  ├─bcrypt
-│        │         │  ├─category
-│        │         │  │  └─impl
-│        │         │  ├─faq
-│        │         │  │  └─impl
-│        │         │  ├─index
-│        │         │  │  └─impl
-│        │         │  ├─notice
-│        │         │  │  └─impl
-│        │         │  ├─personalInformation
-│        │         │  │  └─impl
-│        │         │  ├─phone
-│        │         │  ├─purchase
-│        │         │  │  └─impl
-│        │         │  ├─purchaseManager
-│        │         │  │  └─impl
-│        │         │  ├─review
-│        │         │  │  └─impl
-│        │         │  ├─user
-│        │         │  │  └─impl
-│        │         │  └─util
-│        │         ├──view
-│        │             └─controller
-│        │             └─interceptor
-│        │
-│        ├─resources
-│        │  └─mappings
-│        │  └─applicationContext.xml
-│        │  └─db.properties
-│        │  └─tripon-map-config.xml
-│        │  └─log4j.xml
-│        │
-│        │
-│        └─webapp
-│            ├─resources
-│            │  ├─css
-│            │  ├─imgs
-│            │  └─js
-│            ├─WEB-INF
-│            │   ├─views
-│            │   │   ├─admin
-│            │   │   │  └─manager_index.jsp
-│            │   │   │  └─ ...
-│            │   │   ├─error
-│            │   │   │  └─error.jsp
-│            │   │   ├─template
-│            │   │   │  └─header.jsp
-│            │   │   │  └─footer.jsp
-│            │   │   │  └─manager_header.jsp
-│            │   │   │  └─manager_footer.jsp
-│            │   │   │  └─ ...
-│            │   │   ├─faqPage.jsp
-│            │   |   ├─findID.jsp
-│            │   |   ├─findID2.jsp
-│            │   |   ├─findPW.jsp
-│            │   |   ├─findPW2.jsp
-│            │   |   ├─findPW3.jsp
-│            │   |   ├─findPW4.jsp
-│            │   |   ├─info_managementPage.jsp
-│            │   |   ├─login.jsp
-│            │   |   ├─naverLogin.jsp
-│            │   |   ├─noticePage.jsp
-│            │   |   ├─purchase.jsp
-│            │   |   ├─purchaseok.jsp
-│            │   |   ├─reservation_detailPage.jsp
-│            │   |   ├─reservationPage.jsp
-│            │   |   ├─sign.jsp
-│            │   |   ├─sign2.jsp
-│            │   |   ├─sign3.jsp
-│            │   |   ├─user_activityListPage.jsp
-│            │   |   ├─user_categoryPage.jsp
-│            │   |   ├─user_detailsPage.jsp
-│            │   |   └─user_searchResultPage.jsp
-│            │   |
-│            │   ├─appServlet.xml
-│            │   └─web.xml
-└──          └─index.jsp
-```
+    
+    ```
+    tripON
+    ├── src
+    │   └─main
+    │        ├─java
+    │        │  └─com
+    │        │      ├─tripon
+    │        │         ├──biz
+    │        │         │  ├─activity
+    │        │         │  │  └─impl
+    │        │         │  ├─bcrypt
+    │        │         │  ├─category
+    │        │         │  │  └─impl
+    │        │         │  ├─faq
+    │        │         │  │  └─impl
+    │        │         │  ├─index
+    │        │         │  │  └─impl
+    │        │         │  ├─notice
+    │        │         │  │  └─impl
+    │        │         │  ├─personalInformation
+    │        │         │  │  └─impl
+    │        │         │  ├─phone
+    │        │         │  ├─purchase
+    │        │         │  │  └─impl
+    │        │         │  ├─purchaseManager
+    │        │         │  │  └─impl
+    │        │         │  ├─review
+    │        │         │  │  └─impl
+    │        │         │  ├─user
+    │        │         │  │  └─impl
+    │        │         │  └─util
+    │        │         ├──view
+    │        │             └─controller
+    │        │             └─interceptor
+    │        │
+    │        ├─resources
+    │        │  └─mappings
+    │        │  └─applicationContext.xml
+    │        │  └─db.properties
+    │        │  └─tripon-map-config.xml
+    │        │  └─log4j.xml
+    │        │
+    │        │
+    │        └─webapp
+    │            ├─resources
+    │            │  ├─css
+    │            │  ├─imgs
+    │            │  └─js
+    │            ├─WEB-INF
+    │            │   ├─views
+    │            │   │   ├─admin
+    │            │   │   │  └─manager_index.jsp
+    │            │   │   │  └─ ...
+    │            │   │   ├─error
+    │            │   │   │  └─error.jsp
+    │            │   │   ├─template
+    │            │   │   │  └─header.jsp
+    │            │   │   │  └─footer.jsp
+    │            │   │   │  └─manager_header.jsp
+    │            │   │   │  └─manager_footer.jsp
+    │            │   │   │  └─ ...
+    │            │   │   ├─faqPage.jsp
+    │            │   |   ├─findID.jsp
+    │            │   |   ├─findID2.jsp
+    │            │   |   ├─findPW.jsp
+    │            │   |   ├─findPW2.jsp
+    │            │   |   ├─findPW3.jsp
+    │            │   |   ├─findPW4.jsp
+    │            │   |   ├─info_managementPage.jsp
+    │            │   |   ├─login.jsp
+    │            │   |   ├─naverLogin.jsp
+    │            │   |   ├─noticePage.jsp
+    │            │   |   ├─purchase.jsp
+    │            │   |   ├─purchaseok.jsp
+    │            │   |   ├─reservation_detailPage.jsp
+    │            │   |   ├─reservationPage.jsp
+    │            │   |   ├─sign.jsp
+    │            │   |   ├─sign2.jsp
+    │            │   |   ├─sign3.jsp
+    │            │   |   ├─user_activityListPage.jsp
+    │            │   |   ├─user_categoryPage.jsp
+    │            │   |   ├─user_detailsPage.jsp
+    │            │   |   └─user_searchResultPage.jsp
+    │            │   |
+    │            │   ├─appServlet.xml
+    │            │   └─web.xml
+    └──          └─index.jsp
+    ```
 </details>
 <br><br>
 
