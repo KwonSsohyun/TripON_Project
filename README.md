@@ -31,26 +31,77 @@
 
 
 ### 프론트 언어  
-    HTML5  
-    CSS3  
-    JavaScript  
-    jQuery  
-    Bootstrap  
-    Ajax  
+> HTML5  
+> CSS3  
+> JavaScript  
+> jQuery  
+> Bootstrap  
+> Ajax  
 ### 백엔드 언어  
-    Java  
-    JSP / Servlet  
+> Java  
+> JSP / Servlet  
 ### 데이터베이스  
-    Maria DB  
-    HeidiSQL  
+> Maria DB  
+> HeidiSQL  
 ### 프레임워크  
-    Spring Framework 5.1.6.RELEASE  
-    MyBatis  
-    Spring Security  
-    Maven  
+> Spring Framework 5.1.6.RELEASE  
+> MyBatis  
+> Spring Security  
+> Maven  
 ### 웹서버  
-    Apache Tomcat 9  
+> Apache Tomcat 9  
 ### 도메인
-    Freenom
+> Freenom
 ### 호스팅
-    AWS EC2
+> AWS EC2
+
+
+<br><br>
+
+## ⚒️ 기능 소개
+<details>
+    <summary>유저(회원가입/로그인)</summary>
+    <div markdown="1"><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0013.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0014.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0015.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0016.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0017.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0018.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0019.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0020.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0021.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/01_%EC%9C%A0%EC%A0%80(%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%EB%A1%9C%EA%B7%B8%EC%9D%B8)/0022.jpg" align="center"><br><br>
+</details>
+<br>
+<details>
+    <summary>상품패키지</summary>
+    <div markdown="1"><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/02_%EC%83%81%ED%92%88%ED%8C%A8%ED%82%A4%EC%A7%80/0023.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/02_%EC%83%81%ED%92%88%ED%8C%A8%ED%82%A4%EC%A7%80/0024.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/02_%EC%83%81%ED%92%88%ED%8C%A8%ED%82%A4%EC%A7%80/0025.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/02_%EC%83%81%ED%92%88%ED%8C%A8%ED%82%A4%EC%A7%80/0026.jpg" align="center"><br><br>
+</details>
+<br>
+<details>
+    <summary>상품결제</summary>
+    <div markdown="1"><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/03_%EC%83%81%ED%92%88%EA%B2%B0%EC%A0%9C/0027.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/03_%EC%83%81%ED%92%88%EA%B2%B0%EC%A0%9C/0028.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/03_%EC%83%81%ED%92%88%EA%B2%B0%EC%A0%9C/0029.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/03_%EC%83%81%ED%92%88%EA%B2%B0%EC%A0%9C/0030.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/03_%EC%83%81%ED%92%88%EA%B2%B0%EC%A0%9C/0031.jpg" align="center"><br><br>
+</details>
+<br>
+<details>
+    <summary>마이페이지/고객센터</summary>
+    <div markdown="1"><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0032.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0033.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0034.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0035.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0036.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0037.jpg" align="center"><br><br>
+    <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0038.jpg" align="center"><br><br>
+</details>
+<br>
