@@ -121,8 +121,7 @@
 <details>
     <summary>디렉토리 상세</summary>
     <div markdown="1">
-    
-    ```
+
     tripON
     ├── src
     │   └─main
@@ -209,7 +208,7 @@
     │            │   ├─appServlet.xml
     │            │   └─web.xml
     └──          └─index.jsp
-    ```
+    
 </details>
 <br><br>
 
