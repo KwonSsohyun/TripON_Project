@@ -122,7 +122,7 @@
 <br><br>
 
 ## 🏗 서비스 구조
-
+<img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EC%84%9C%EB%B9%84%EC%8A%A4%EA%B5%AC%EC%A1%B0/%ED%8A%B8%EB%A6%BD%EC%98%A8_%EC%84%9C%EB%B9%84%EC%8A%A4%EA%B5%AC%EC%A1%B0.jpg" align="center">
 
 
 
