@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+.pc .main-menu {
+	display: none !important;
+}
+
+span{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight:bold;
+	letter-spacing: 2px;
+}
+
+.ht{
+	font-weight: 300;
+}
+
+.un {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 125px;
+	width: auto;
+}
+
+.sign{
+	width: 100%;
+	margin:150px auto; 
+	padding:0;
+	padding-left: 20px;
+	background-color: #FFF;
+	font-size:14px;
+	display:flex;
+	flex-direction:column;
+}
+
+.sign h2 {
+	margin-top: 50px;
+	color: #000000; 
+	font-size: 22px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sign h1 {
+	color: #000000; 
+	line-height: 45px;
+	font-size: 30px;
+	font-family: 'Noto Sans KR', sans-serif;
+	display: flex;
+	align-items: center;
+}
+
+.sign span {
+	color: #5F04F9;
+	font-weight:bold;
+}
+
+.submit {
+  margin-top: 40px;
+  width: 100%;
+  float: right;
+  
+}
+.submit input {
+  width: 150px;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  background: #5F04F9;
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+input[type=submit] {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight:bold;
+}
+
+@media screen and (max-width:575px) {
+	.sign {
+		padding-left: 30px;	
+		margin-top: 80px;
+	}
+	.sign h2 {
+		margin-top: 0;
+	}
+
+}

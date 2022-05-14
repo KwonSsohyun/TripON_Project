@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="PurchaseDAO">
+
+	<insert id="insertPurchase">
+		<![CDATA[
+			INSERT INTO PURCHASE 
+			(
+			PUR_STATENUM, 
+			PUR_IMPID,
+			PUR_MERCHANTID, 
+			PUR_USER_ID, 
+			PUR_USER_NAME, 
+			PUR_PURCHASEDATE, 
+			PUR_BOOKINGDATE, 
+			PUR_ACT_TITLE, 
+			PUR_OPT_NAME_1, 
+			PUR_OPT_NAME_2, 
+			PUR_OPT_NAME_3, 
+			PUR_OPT_NAME_4, 
+			PUR_OPT_COUNT_1, 
+			PUR_OPT_COUNT_2, 
+			PUR_OPT_COUNT_3, 
+			PUR_OPT_COUNT_4, 
+			PUR_PRICE 
+			) VALUES (
+			
+			#{pur_statenum}, 
+			#{pur_impId}, 
+			#{pur_merchantId}, 
+			#{pur_user_id}, 
+			#{pur_user_name}, 
+			#{pur_purchaseDate}, 
+			#{pur_bookingDate}, 
+			#{pur_act_title}, 
+			#{pur_opt_name_1}, 
+			#{pur_opt_name_2}, 
+			#{pur_opt_name_3}, 
+			#{pur_opt_name_4}, 
+			#{pur_opt_count_1}, 
+			#{pur_opt_count_2}, 
+			#{pur_opt_count_3}, 
+			#{pur_opt_count_4}, 
+			#{pur_price}
+			)
+		]]>
+	</insert>
+
+
+</mapper>

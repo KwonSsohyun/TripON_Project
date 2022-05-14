@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/* 	BOOTSTRAP */
+/*  전체 리스트 */
+	.list-group-item {
+		border-top:none;
+		border-left:none;
+		border-right:none;
+	    border-bottom: 1px solid rgba(0,0,0,.125);
+	}
+	
+/* 	기본 형식 */
+	*	{padding: 0;margin: 0;}
+	body{
+		font-family: 'Noto Sans KR', sans-serif;
+		text-align: center;
+	}
+	
+/* 	결제 관리자 페이지 TITLE */
+	.purchase-title{
+		font-size: 35px;
+		margin: 30px 0 70px 0;
+    	color: #454545;
+    	font-weight: bold;
+    	text-align: left;
+	}
+	
+/* 	결제 관리자 페이지 BODY */
+	.purchase-body{
+		background-color:#fff;
+		margin-left:5px;
+		margin-right:5px;
+		padding-left:50px;
+		padding-right:50px;
+		border-radius:5px;
+	}
+	
+/* 	결제 관리자 페이지 HEADER */
+	.purchase-body-header{
+		height:20px;
+	}
+	
+/* 	결제 관리자 페이지 TOP MENU */
+	.purchase-top-menu{
+		font-weight: bold;
+		border-bottom: 1px solid #000000;
+	}
+	
+/* 	결제 관리자 페이지 LIST */
+	.purchase-list{
+		font-weight: bold;
+		color:#a6adb6;
+	}
+	
+/* 	결제 관리자 페이지 LIST 상세보기 BTN */
+	.purchase-view{ 
+	}
+	
+/* 	결제 관리자 페이지 LIST 상세정보창 */
+	.purchase-list-view{
+		display: none;
+	
+		color:#a6adb6;
+		background-color: #f9f9f9;
+	}
+	
+/* 	결제 취소 text */
+	.canceltext{
+		color:red;
+	}
+	
+/* 	결제 관리자 페이지 BODY FOOTER */
+	.purchase-body-footer{
+		height:40px;
+		width:100%;
+	}
+
+/* 	결제 관리자 list 수직 정렬  : row 안에 들어있는 div 전체 지정*/
+	.purchase-list-line > div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+/* 	결제 관리자 list 수직 정렬  : row 안에 들어있는 div 전체 지정*/
+	.purchase-list-view-line > div.col-4, div.col-8 {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		font-size: 0.8em;
+	}
+	
+/* 	pagination style */
+	.page-item.active .page-link {	
+		background-color: #5621ad;
+		border-color: #5621ad;
+	}
+	a.page-link{
+		color: #5621ad;
+	}
+	.page-link:hover {
+		color: #5621ad;
+	    background-color: #f9f9f9;
+	}
+	a.page-link:link:active, a.page-link:visited:active, a.page-link:hover{
+		color: #a6adb6 !important;
+	}
+	a.purchase-view:link:active, a.purchase-view:visited:active, a.purchase-view:hover{
+		color: #a6adb6 !important;
+	}
+	
+/* 	MOBILE SIZING */
+@media screen and (max-width:992px){
+	
+/* 	small-menu, large-menu */
+	div#small-menu {
+		display:block;
+	}
+	div#large-menu{
+		display:none;
+	}
+	
+/* 	결제 관리자 페이지 BODY */	
+	.purchase-body{
+		padding-left:1rem;
+		padding-right:1rem;
+	}
+
+/* 	결제 관리자 페이지 TITLE */
+	.purchase-title {
+		margin: 10px 20px 10px 20px;
+		font-size: 1rem;
+	}
+	
+/* 	결제 관리자 페이지 HEADER */
+	.purchase-body-header {
+	    height: 1rem;
+	}
+	
+/* 	결제 관리자 페이지 FOOTER */	
+	.purchase-body-footer {
+    	height: 2rem;
+	}
+	
+/* 	전체 리스트 */
+	.list-group-item {
+		font-size: 0.5rem;
+	}
+ 
+ /* 결제 관리자 페이지 TOP MENU */     
+	.purchase-top-menu{
+		font-size: 0.5rem;
+		
+		margin-left:0;
+		margin-right:0;
+		padding-left:1px;
+		padding-right:1px;
+	}
+	
+/* 	결제 관리자 페이지 LIST */
+	.purchase-list{
+		font-size: 0.5rem;
+		
+		margin-left:0;
+		margin-right:0;
+		padding-left:1px;
+		padding-right:1px;
+	}
+	
+ /* 	결제 관리자 페이지 LIST 상세보기 BTN */      
+    .purchase-view{
+    	font-size: 0.5rem;
+    	color: #a6adb6;
+	}
+	
+/* 	결제 관리자 페이지 LIST 상세정보창 */	
+	.purchase-list-view{
+		font-size: 0.5rem;
+		
+		margin-left:0;
+		margin-right:0;
+		padding-left:1px;
+		padding-right:1px;
+	}
+/* 	결제 취소 버튼 */
+	.purchase-Order-Cancel-btn{
+		font-size: 0.5rem;
+	}
+	
+/* 	pagination style */	
+	.pagination{
+		font-size: 0.5rem;
+	}
+
+/* 	결제 관리자 list 수직 정렬  : row 안에 들어있는 div 전체 지정*/
+	.purchase-list-view-line {
+		font-size: 0.3rem;
+	}
+	.purchase-list-view-line > div.col-4 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.purchase-list-view-line > div.col-6, div.col-10 {
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		text-align:left;
+	}
+}
+
+/* 	PC SIZING */
+	@media screen and (min-width:992px){ 	
+		div#small-menu {
+			display:none;
+		}
+		div#large-menu{
+			display:block;
+		}
+	}	
+
+/* 	MOBILE TAB : 관리자 결제 페이지 TOP_MENU */
+	.purchase-management-menu a {
+		color: #000 !important;
+	}

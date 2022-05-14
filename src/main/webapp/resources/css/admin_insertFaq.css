@@ -1,0 +1,77 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.menu_flex {
+	padding: 30px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+.menu_flex h2 {
+	margin-bottom: 70px;
+	color: #454545;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.faqlistbtn {
+	display: flex;
+	justify-content: right;
+	margin: 0px 0px 10px;
+}
+.insert-btn {
+	display: flex;
+	justify-content: right;
+}
+.insertList {
+	width: 100%;
+	padding: 50px;
+	background-color: #FFF;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+table,th,td {
+	border: 1px solid #dddddd;
+	text-align: center;
+}
+table {
+	width: 100%;
+}
+table > tr > td {
+	width: 100px;
+}
+.form-group {
+	margin: 0px;
+}
+.form-control {
+	border-style: none;
+}
+.form-control:focus {
+	box-shadow: none;
+}
+#comment {
+	resize: none;
+}
+.ctg {
+	padding: 8px;
+}
+.radio-group-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+input[type="radio"] {
+	margin-left: 20px;
+	margin-right: 5px;
+}
+.radio-label {
+	margin: 0px;
+}
+.savebtn {
+	display: flex;
+	justify-content: right;
+	margin: 20px 0px 0px;
+}

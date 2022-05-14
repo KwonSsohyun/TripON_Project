@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+label{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: bold;
+	width : 200px;
+	margin-top:20px;
+	color: #8b8b8d;
+}
+
+.description{
+	font-size:12px;
+	margin-top:10px;
+}
+
+#id_request{
+	margin-left : 10px;
+	margin-top:10px;
+}
+
+.adminInsert{
+	width: 100%;
+	margin:20px auto; 
+	padding:50px;
+	background-color: #FFF;
+	font-size:14px;
+	display:flex;
+	flex-direction:column;
+}
+
+h2 {
+	margin-top: 30px;
+	color: #454545;
+	font-size: 35px;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.adminInsert span {
+	color: #5F04F9;
+	font-weight:bold;
+}
+
+.subject_underline {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-bottom: solid 1px #d3d3d3;
+
+}	
+
+.insert-inner-div {
+	margin: 0px 10px;
+}	
+
+.inner-div-col {
+	padding: 0px;
+}
+
+.insert-inner-input {
+	width: 100%;
+}
+
+.id {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.id button{
+	width: 100px;
+	height: 35px;
+	background-color: #333333;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.id input {
+	height: 35px;
+	margin-top: 10px;
+
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.pw {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+
+.pw input {
+	height: 35px;
+	margin-top: 10px;
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.name {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+
+.name input {
+	height: 35px;
+	margin-top: 10px;
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.nickname {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+
+.nickname input {
+	height: 35px;
+	margin-top: 10px;
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.phonenumber {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.phonenumber input {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	
+}
+
+.phonenumber select {
+	width: 100%;
+	height: 35px;
+	background: #f0f0f0;
+	outline-style: none;
+	border: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	padding-left: 10px;
+}
+
+.phone-group {
+	width: 80%;
+	margin: 0px;
+}
+
+.phone-group-input {
+	 display: flex;
+	 align-items: center;
+}
+
+.phone-group input {
+	margin: 0px;
+}
+
+select:focus{
+	background: #ffffff;
+	box-shadow: 0 0 0 1px #5f04f9;
+}
+
+.email {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+	
+}
+
+
+.email input {
+	height: 35px;
+	margin-top: 10px;
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.permission {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.permission input {
+	height: 35px;
+	margin-top: 10px;
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.address {
+	color:#666666;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.address button{
+	width: 90px; 
+	height: 35px;
+	background-color: #333333;
+	color: #ffffff;
+	border: none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.address input {
+	height: 35px;
+	margin-top: 10px;
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+input:focus {
+	background: #ffffff;
+	box-shadow: 0 0 0 1px #5f04f9;
+}
+
+.submit {
+	text-align: center;
+	padding: 60px 0px;
+ 	width: 100%;
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+		
+.submit input {
+	width: 150px;
+	height: 50px;
+	border: 0;
+	outline: none;
+	border-radius: 5px;
+	background: #5F04F9;
+	color: white;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+}
+
+@media screen and (max-width:991px) {
+	h2 {
+		margin-top: 120px;
+	}
+}
+
+@media screen and (max-width:575px) {
+	.adminInsert {
+		padding: 50px 0px;
+	}
+	
+	.sm-display-block-div {
+		display: block !important; 
+	}
+	
+	.col-12, .col-9 {
+		max-width: 100%;
+	}
+	
+	.insert-inner-input, .phonenumber select, .phone-group input, .address input, .address button, .id button {
+		height: 45px !important;
+	}
+	
+	.inner-div-col {
+		font-size: 15px;
+	}
+	
+	.submit input {
+		width: 100px;
+	}
+	
+	.id button {
+		width: 150px;
+	}
+	
+	h2 {
+		margin-top: 50px;
+	}
+
+}

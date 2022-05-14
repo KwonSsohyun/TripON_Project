@@ -1,0 +1,96 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+/* .ntcmng { */
+/* 	width: 100%; */
+/* 	padding: 20px 0px 0px; */
+/* 	float: left; */
+/* 	justify-content: space-between; */
+/* 	align-items: center; */
+/* } */
+.menu_flex {
+	padding: 30px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+.menu_flex h2 {
+	margin-bottom: 70px;
+	color: #454545;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.ntclistbtn {
+	display: flex;
+	justify-content: right;
+/* 	float: right; */
+	margin-bottom: 10px;
+	clear: both;
+	
+}
+#line-black {
+	color: black;
+}
+.insertList {
+	width: 100%;
+	padding: 50px;
+	background-color: #FFF;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+table, th, td {
+	border:1px solid #dddddd;
+	text-align: center;
+}
+
+/* td { */
+/* 	color: black; */
+/* } */
+table {
+	width: 100%;
+}
+table > tr > td {
+	width: 100px;
+}
+.form-group {
+	margin: 0px;
+}
+.attachement {
+	/* border:1px solid black;
+	text-align: center; */
+}
+.savebtn {
+	display: flex;
+	justify-content: right;
+	margin-top: 20px;
+/* 	float: right; */
+  
+}
+#target-select {
+	width: 100%;
+	border-style: none;
+}
+#target-select:focus {
+	outline: none;
+}
+#fileInput {
+	width: auto;
+}
+input#userfile {
+}
+.form-control {
+	border-style: none;
+}
+.form-control:focus {
+	box-shadow: none;
+}
+#comment {
+	resize: none;
+}
+.btn-default {
+	margin: 0px;
+}

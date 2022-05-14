@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+*:focus {border-style: none;}
+body {font-family: 'Noto Sans KR', sans-serif;}
+input {
+    color: #a6adb6;
+    caret-color: #5f04f9;
+    border: 1px solid #ddd;
+}
+h2 {
+	margin: 30px 0 70px 0;
+	color: #454545;
+	font-weight: bold;
+	font-size: 35px;
+}
+#searchContainer {margin-bottom: 30px;}		/* 검색 */
+#admin_activityList {		/* 레이아웃 */
+	background-color: #fff;	/* !important */
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 50px;
+	margin: 20px auto;
+	font-size: 14px;
+}
+table {text-align: center;}
+table thead tr {border-bottom: 1px solid #000;}		/* THEAD */
+table thead th {padding-bottom: 10px;}
+table tbody tr {		/* TBODY */
+    cursor: pointer;
+    transition: all 0.4s;
+}
+table tbody tr:hover {
+	background-color: #f2f2f2;
+	opacity: 0.8;
+}
+table tbody tr td {
+	padding: 30px;
+	border-bottom: 1px solid #dee2e6;
+}
+table tbody tr td #del_btn {transition: all 0.4s;}
+table tbody tr td #del_btn:hover {background-color: #b82e5c;}
+table tbody tr td #del_btn a {color: #fff;}
+#table_footer {margin-top: 40px;}
+.pagination {margin: 0 auto;}		/* PAGINATION */
+.page-link {
+	font-size: 16px;
+	font-weight: bold;
+	color: #5621AD;
+}
+.insert_btn {text-align: right;}
+.insert_btn a {margin-right: 20px;}

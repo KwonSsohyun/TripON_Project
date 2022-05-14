@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.menu-flex {
+	padding: 30px 0px 0px;
+	margin: 0px;
+	display: flex;
+	justify-content: space-between;
+}
+.menu-flex h2 {
+	margin-bottom: 70px;
+	color: #454545;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.newfaqbtn {
+	display: flex;
+	justify-content: right;
+	margin-bottom: 10px;
+	
+}
+.faqmng {
+	width: 100%;
+	border-bottom: 1px solid #dddddd;
+	margin: 0px;
+	padding: 20px 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+.backcol {
+	display: flex;
+	padding: 40px;
+	background-color: #FFF;
+	font-size: 14px;
+}
+.sub_tab {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	color: #666;
+	margin: 15px 30px;
+	margin-right: 10px;
+	font-size: 12px;
+}
+.btn:focus {
+	box-shadow: none !important;
+	
+}
+.btn:active {
+	box-shadow: none !important;
+}
+.sub_tab span {
+	margin: 0px 15px;
+	color: #cccccc;
+}
+.updatebtn {
+	display: flex;
+	justify-content: right;
+	margin-top: 20px;
+}
+.faq_content_div {
+	font-size: 16px;
+	word-break: break-all;
+	width: 100%;
+	padding: 20px;
+	clear: both;
+}
+@media screen and (max-width:600px) {
+	.backcol {
+		padding: 50px 10px;
+	}
+	.sub_tab {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.sub_tab span {
+		display: none;
+	}
+}

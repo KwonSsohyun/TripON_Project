@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+*:focus {
+	border-style: none;
+	outline: 0;
+}
+input {
+  color: #a6adb6;
+  caret-color: #5f04f9;
+  border: 1px solid #ddd;
+}
+textarea {resize: none;}
+a {color: #fff;}
+a:hover {color: #fff;}
+#categoryCheck {background-color: #fff;}
+.inner_btn {        /* 상품수정&목록버튼 */
+    margin-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.inner_btn button {margin-right: 6px;}
+.inner_btn button:nth-child(2) {margin-right: 0;}

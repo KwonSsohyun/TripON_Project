@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="NoticeDAO">
+
+	<resultMap id="noticeResult" type="notice">
+		<id property="ntc_seq" column="NTC_SEQ"></id>
+		<result property="ntc_title" column="NTC_TITLE"></result>
+		<result property="ntc_mem_id" column="NTC_MEM_ID"></result>
+		<result property="ntc_content" column="NTC_CONTENT"></result>
+		<result property="ntc_regdate" column="NTC_REGDATE"></result>
+		<result property="ntc_count" column="NTC_COUNT"></result>
+		<result property="ntc_filename" column="NTC_FILENAME"></result>
+		<result property="ntc_category" column="NTC_CATEGORY"></result>
+		<result property="ntc_target" column="NTC_TARGET"></result>
+	</resultMap>
+
+	<insert id="insertNotice">
+		<![CDATA[
+			INSERT INTO NOTICE (NTC_TITLE, NTC_MEM_ID, NTC_CONTENT, NTC_TARGET, NTC_FILENAME) VALUES (#{ntc_title}, #{ntc_mem_id}, #{ntc_content}, #{ntc_target}, #{ntc_filename})
+		]]>
+	</insert>
+
+	<update id="updateNotice">
+		<![CDATA[
+			UPDATE NOTICE SET NTC_TITLE=#{ntc_title}, NTC_CONTENT=#{ntc_content}, NTC_TARGET=#{ntc_target}, NTC_FILENAME=#{ntc_filename} WHERE NTC_SEQ=#{ntc_seq}
+		]]>
+	</update>
+
+	<update id="updateCount">
+		<![CDATA[
+			UPDATE NOTICE SET NTC_COUNT=NTC_COUNT+1 WHERE NTC_SEQ=#{ntc_seq}
+		]]>
+	</update>
+
+	<delete id="deleteNotice" parameterType="Integer">
+			<![CDATA[
+				DELETE FROM NOTICE WHERE NTC_SEQ=#{seq}
+				
+			]]>
+	</delete>
+	
+	<select id="getNoticeTotal" resultType="notice">
+			<if test="searchCondition == 'NTC_TITLE'">
+<!-- 				SELECT COUNT(CASE WHEN NTC_TITLE LIKE CONCAT('%', #{searchKeyword}, '%') THEN 1 END) AS TOTAL FROM NOTICE -->
+				SELECT COUNT(*) AS TOTAL FROM NOTICE WHERE NTC_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition == 'NTC_CONTENT'">
+<!-- 				SELECT COUNT(CASE WHEN NTC_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%') THEN 1 END) AS TOTAL FROM NOTICE -->
+				SELECT COUNT(*) AS TOTAL FROM NOTICE WHERE NTC_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+	</select>
+	
+	<select id="getUserNoticeTotal" resultType="notice">
+			<if test="searchCondition == 'NTC_TITLE'">
+<!-- 				SELECT COUNT(CASE WHEN NTC_TITLE LIKE CONCAT('%', #{searchKeyword}, '%') THEN 1 END) AS TOTAL FROM NOTICE -->
+				SELECT COUNT(*) AS TOTAL FROM NOTICE WHERE NTC_TITLE LIKE CONCAT('%', #{searchKeyword}, '%') AND NTC_TARGET='사용자'
+			</if>
+			<if test="searchCondition == 'NTC_CONTENT'">
+<!-- 				SELECT COUNT(CASE WHEN NTC_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%') THEN 1 END) AS TOTAL FROM NOTICE -->
+				SELECT COUNT(*) AS TOTAL FROM NOTICE WHERE NTC_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%') AND NTC_TARGET='사용자'
+			</if>
+	</select>
+
+	<select id="getNotice" resultType="notice">
+		<![CDATA[
+			SELECT * FROM NOTICE WHERE NTC_SEQ=#{ntc_seq}
+		]]>
+	</select>
+
+	<select id="getNoticeList" resultMap="noticeResult">
+			SELECT * FROM NOTICE WHERE 1 = 1
+			<if test="searchCondition == 'NTC_TITLE'">
+				AND NTC_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition == 'NTC_CONTENT'">
+				AND NTC_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition == 'NTC_MEM_ID'">
+				AND NTC_MEM_ID LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition == 'NTC_TARGET'">
+				AND NTC_TARGET LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			ORDER BY NTC_SEQ DESC LIMIT #{listCnt} OFFSET #{pageNum}
+	</select>
+	
+	<select id="getUserNoticeList" resultMap="noticeResult">
+			SELECT * FROM NOTICE WHERE 1 = 1
+			<if test="searchCondition == 'NTC_TITLE'">
+				AND NTC_TITLE LIKE CONCAT('%', #{searchKeyword}, '%') AND NTC_TARGET='사용자'
+			</if>
+			<if test="searchCondition == 'NTC_CONTENT'">
+				AND NTC_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%') AND NTC_TARGET='사용자'
+			</if>
+			ORDER BY NTC_SEQ DESC LIMIT #{listCnt} OFFSET #{pageNum}
+	</select>
+	
+	<select id="getNoticeList_T" resultMap="noticeResult">
+		<![CDATA[
+			SELECT * FROM NOTICE WHERE NTC_TITLE LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY NTC_SEQ DESC
+		]]>
+	</select>
+	
+<!-- 	SELECT * FROM(SELECT SEQ, TITLE, WRITER, @ROWNUM:=@ROWNUM+1 AS rownum FROM BOARD ,(SELECT @ROWNUM:=0) AS R WHERE TITLE LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY SEQ DESC) T LIMIT 14 OFFSET -->
+	
+	<select id="getNoticeList_C" resultMap="noticeResult">
+		<![CDATA[
+			SELECT * FROM NOTICE WHERE NTC_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY NTC_SEQ DESC
+		]]>
+	</select>
+
+</mapper>

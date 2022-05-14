@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+*:focus {
+	border-style: none;
+	outline: 0;
+}
+input {
+  color: #a6adb6;
+  caret-color: #5f04f9;
+  border: 1px solid #ddd;
+}
+textarea {resize: none;}
+a {color: #fff;}
+a:hover {color: #fff;}
+#selectCategory {padding: 0;margin: 0;}
+#addCategory {margin-bottom: 15px;}		/* 카테고리추가버튼 */
+#addOption {margin-bottom: 15px;}		/* 상품옵션추가버튼 */
+.inner_btn {        /* 상품등록&삭제버튼 */
+    margin-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.inner_btn button {margin-right: 6px;}
+.inner_btn button:nth-child(2) {margin-right: 0;}

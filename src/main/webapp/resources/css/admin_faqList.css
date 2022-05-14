@@ -1,0 +1,274 @@
+@charset "UTF-8";
+ * {
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.container {
+	padding: 0px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+table, th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table thead th {
+	border-top: none;
+	border-bottom: 1px solid black;
+}
+td {
+	padding: 0px 12px !important;
+	color: #a6adb6;
+}
+.td-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+}
+tbody tr.tr-hover:hover {
+	background-color: #fafafa;
+}
+
+.none-message {
+	padding-top: 80px !important;
+	
+}
+.td-div-span1 {
+	display: inline;
+	width: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.td-div-span2 {
+	display: inline;
+	width: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.cursor-div {
+	cursor: pointer;
+}
+.faqList {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding: 50px;
+	background-color: #FFF;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+.faqmng {
+    width: 100%;
+    padding: 30px 0px 10px 0px;
+    float: left;
+    justify-content: space-between;
+    align-items: center;
+}
+.faqmng h2 {
+	margin-bottom: 70px;
+	color: #454545;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.menu_flex {
+    display: flex;
+    justify-content: space-between;
+}
+#sel1 {
+	width: 30%;
+	margin-right: 5px;
+	padding: 0px;
+}
+.search-1 {
+	font-size: 16px;
+	height: 38px;
+	border-radius: 0px 5px 5px 0px !important;
+	margin-right: 5px;
+	white-space: nowrap;
+}
+.form-group-1 {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+.form-group-2 {
+	display: flex;
+	justify-content: right;
+}
+.form-control:focus {
+	box-shadow: none;
+}
+.search-1:focus, #rgtbtn, .delete-btn:focus {
+	box-shadow: none !important;
+}
+/* .search-1:focus, #rgtbtn:focus, .delete-btn:focus { */
+/* 	box-shadow: none !important; */
+/* } */
+/* .form-control:focus, #rgtbtn:focus, .btn:focus { */
+/* 	box-shadow: none; */
+/* } */
+/* .form-control:active, #rgtbtn:active, .btn:active { */
+/* 	box-shadow: none; */
+/* } */
+tbody tr.tr-hover:hover {
+	background-color: #fafafa;
+}
+.bottombtn {
+	float: right;
+}
+.pagination {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	border-radius: 0.25rem;
+}
+a.page-link:hover {
+	color: #5621ad;
+}
+.page-link {
+	position: relative;
+	display: block;
+	line-height: 1.25;
+	color: #5621AD;
+	font-weight: bold;
+	background-color: #FFF;
+	border: 1px solid #dee2e6;
+}
+.page-link:focus {
+	box-shadow: none;
+}
+ul {
+    list-style: none;
+}
+#rgtbtn {
+   flex: none;
+   border-radius: 5px;
+   margin: 0px;
+ }
+.mst {margin:auto 10px;}
+
+.input-group-append {
+	margin: 0px !important;
+	display: flex;
+	justify-content: right;
+}
+.input-group-append>.form-control {
+	width: 100%;
+	border-radius: 5px 0px 0px 5px;
+}
+.page-item.active .page-link {
+	border-color: #5f04f9 !important;
+	background-color: #5f04f9 !important;
+}
+.th1 {
+	width: 10%;
+}
+.th2 {
+	width: 25%;
+}
+.th3 {
+	width: 15%;
+}
+.th4 {
+	width: 20%;
+}
+.th5 {
+	width: 15%;
+}
+.th6 {
+	width: 15%;
+}
+.table th, .table td {
+	white-space: nowrap;
+}
+@media screen and (max-width:991px) {
+	.th1 {
+		width: 10%;
+	}
+	.th2 {
+		width: 25%;
+	}
+	.th3 {
+		width: 15%;
+	}
+	.th4 {
+		width: 20%;
+	}
+	.th5 {
+		width: 15%;
+	}
+	.th6 {
+		width: 15%;
+	}
+/* 	.td-div > span { */
+/* 		width: 150px; */
+/* 	} */
+	
+}
+@media screen and (max-width:710px) {
+	.bye-td5 {
+		display: none;
+	}
+}
+@media screen and (max-width:658px) {
+	.th1 {
+		width: 15%;
+	}
+	.th2 {
+		width: 25%;
+	}
+	.th3 {
+		width: 15%;
+	}
+	.th4 {
+		width: 25%;
+	}
+/* 	.th5 { */
+/* 		width: 20%; */
+/* 	} */
+	.th6 {
+		width: 20%;
+	}
+	.table th, .table td {
+		font-size: 12px;
+	}
+}	
+@media screen and (max-width:576px) {
+	.faqList {
+		padding: 50px 10px;
+	}
+	.form-group-1 {
+		display: block;
+		position: relative;
+	}
+	.rgtbtn-div {
+		display: flex;
+		justify-content: right;
+		align-items: center;
+		margin-top: 10px;
+	}
+	.search-1 {
+		margin-right: 0px;
+	}
+}
+@media screen and (max-width:493px) {
+	.bye-td4 {
+		display: none;
+	}
+}
+@media screen and (max-width:389px) {
+	.noticeList {
+		padding: 50px 0px;
+	}
+}
+/* @media screen and (max-width: 991px) {
+
+} */

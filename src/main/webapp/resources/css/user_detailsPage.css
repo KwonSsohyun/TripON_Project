@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+* {padding: 0;margin: 0;}
+*:focus {outline: 0;}
+body {font-family: 'Noto Sans KR', sans-serif;}
+input {
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    color: #a6adb6;
+}
+li {list-style: none;}
+/* ================ Section ================ */
+section {width: 100%;}
+
+@media screen and (max-width: 992px) {
+    .productImg {margin: 0 auto;}
+}
+.productImg {        /* 상품이미지 */
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.productImg img {
+    background-position: center;
+    background-color: cover;
+    height: 32rem;
+}
+#payMent {      /* 결제선택폼 */
+    padding: 40px;
+    text-align: center;
+}
+#payMent #dateScroll {      /* 날짜옵션 */
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#payMent #optionScroll {        /* 상품옵션 */
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#payMent #optionInner {padding: 6px;}       /* 옵션선택 */
+#payMent #optionInner input[type=button] {      /* 증가&감소버튼 */
+    width: 2rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+#payMent #optionInner #quantity01, #quantity02, #quantity03, #quantity04 {       /* 수량 */
+    width: 2rem;
+    text-align: center;
+}
+#payMent #optionInner input:last-child {margin-left: 30px;}
+#payMent .price {       /* 상품가격 */
+    width: 100%;
+    vertical-align: middle;
+}
+#payMent .price h5 {display: inline-block;}
+#payMent .price .btn {      /* 바로구매버튼 */
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+   	background: #5F04F9;
+	color: white;
+	border:#5F04F9;
+	
+}
+#tabMenu {      /* 탭메뉴(상품정보, 공지사항, QnA, 리뷰) */
+	width: 100%;
+	margin: 40px auto;
+}
+#tabMenu .tab li {
+	width: 25%;
+	height: 60px;
+	float: left;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+#tabMenu .tab li:nth-child(1) {border-left: 1px solid #ddd;}
+#tabMenu .tab li:nth-child(4) {border-right: 1px solid #ddd;}
+#tabMenu .tab li a {
+	display: block;
+	text-decoration: none;
+	line-height: 60px;
+	text-align: center;
+	color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 1px 0 rgba(0, 0, 0, 1);
+}
+#tabMenu .tab li a.selected {
+	font-weight: bold;
+    color: #000;
+    transition: all 0.5s;
+    background-color: #333;
+    color: #fff;
+}
+#tabMenu .panel {clear: both;width: 100%;}
+#tabMenu .panel li {
+	padding: 100px;
+    text-align: center;
+}
+#tabMenu .panel li table {width: 100%;}     /* TabMenuIn-Table */
+#tabMenu .panel li table #reviewForm {width: 100%;}     /* Review-Form */
+#tabMenu .panel li table #reviewForm .row .no-padding {padding: 0 !important;}
+#tabMenu .panel li table #reviewForm textarea {        /* 리뷰 */
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ccc;
+    resize: none;
+    padding: 20px;
+}
+#tabMenu .panel li table #reviewForm input {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-left: none;
+    color: #333;
+}
+textarea:focus {
+	background: #ffffff;
+	box-shadow: 0 0 0 1px #5f04f9;
+}
+
+.bottom-line{
+	clear: both; 
+}
+
+.pagination{
+	padding: 20px 0;
+}
+.page-link {
+	color: #5621AD;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.page-link:focus, .page-link:active {
+ 	box-shadow: none !important;
+}
+
+.page-link:hover {
+	background-color: #5621AD;
+	color: #ffffff;
+}
+
+.page-item.active .page-link {
+	background-color: #5621AD;
+	border-color: #5621AD;
+	color: #ffffff;
+}
+
+
+.review_input {
+	color:#666666;
+	font-size: 14px;
+}
+
+.review_input textarea {
+/* 	padding: 0px 10px;
+	border: 1px solid #f0f0f0; */
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.left-align{
+	text-align: left;
+}
+
+.sticky {
+  position: sticky;
+  top: 95px;
+  background-color: white;
+  
+}
+.tab-title{
+  font-size: 2.5rem;
+  font-weight: 800;
+  background-image: linear-gradient(to left, #5621AD, #553c9a);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+}
+
+/* ==============pagination========== */
+.pagination {margin: 0 auto;}		/* PAGINATION */
+.page-link {
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	color: #5621AD;
+}
+
+@media screen and (max-width:767px) {
+	#tabMenu .panel li {
+	padding: 10px;
+    text-align: center;
+	}
+	
+	#payMent h2 {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	#payMent h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	#tab1 table tbody img {
+		/* weight: 100%; */
+	}
+	
+	.productImg {        /* 상품이미지 */
+    width: 100%;
+    border: 1px solid #ccc;
+	}
+	.productImg img {
+	    background-position: center;
+	    background-color: cover;
+	    height: 24rem;
+	}
+}

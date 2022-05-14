@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- Alias 설정 -->
+	<typeAliases>
+		<typeAlias type="com.tripon.biz.user.UserVO" alias="user"></typeAlias>
+		<typeAlias type="com.tripon.biz.faq.FaqVO" alias="faq"></typeAlias>
+		<typeAlias type="com.tripon.biz.notice.NoticeVO" alias="notice"></typeAlias>
+		<typeAlias type="com.tripon.biz.activity.ActivityVO" alias="activity"></typeAlias>
+		<typeAlias type="com.tripon.biz.category.CategoryVO" alias="category"></typeAlias>
+		<typeAlias type="com.tripon.biz.review.ReviewVO" alias="review"></typeAlias>
+		<typeAlias type="com.tripon.biz.purchase.PurchaseVO" alias="purchase"></typeAlias>
+		<typeAlias type="com.tripon.biz.purchaseManager.PurchaseManagerVO" alias="purchaseManager"></typeAlias>
+		<typeAlias type="com.tripon.biz.personalInformation.PersonalInformationVO" alias="personalInformation"></typeAlias>
+		<typeAlias type="com.tripon.biz.index.IndexVO" alias="index"></typeAlias>
+	</typeAliases>
+	
+	<!-- Sql Mapper 설정 -->
+	<mappers>
+		<mapper resource="mappings/user-mapping.xml" />
+		<mapper resource="mappings/faq-mapping.xml" />
+		<mapper resource="mappings/notice-mapping.xml" />
+		<mapper resource="mappings/activity-mapping.xml"/>
+		<mapper resource="mappings/category-mapping.xml"/>
+		<mapper resource="mappings/review-mapping.xml"/>
+		<mapper resource="mappings/purchase-mapping.xml"/>
+		<mapper resource="mappings/PurchaseManager_mapping.xml" />
+		<mapper resource="mappings/personalInformation-mapping.xml"/>
+		<mapper resource="mappings/index-mapping.xml"/>
+	</mappers>
+
+</configuration>

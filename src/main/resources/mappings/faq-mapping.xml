@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="FaqDAO">
+
+	<resultMap id="faqResult" type="faq">
+		<id property="faq_seq" column="FAQ_SEQ"></id>
+		<result property="faq_title" column="FAQ_TITLE"></result>
+		<result property="faq_mem_id" column="FAQ_MEM_ID"></result>
+		<result property="faq_content" column="FAQ_CONTENT"></result>
+		<result property="faq_regdate" column="FAQ_REGDATE"></result>
+		<result property="faq_count" column="FAQ_COUNT"></result>
+		<result property="faq_category" column="FAQ_CATEGORY"></result>
+	</resultMap>
+
+	<insert id="insertFaq">
+		<![CDATA[
+			INSERT INTO FAQ (FAQ_TITLE, FAQ_MEM_ID, FAQ_CONTENT, FAQ_CATEGORY) VALUES (#{faq_title}, #{faq_mem_id}, #{faq_content}, #{faq_category})
+		]]>
+	</insert>
+
+	<update id="updateFaq">
+		<![CDATA[
+			UPDATE FAQ SET FAQ_TITLE=#{faq_title}, FAQ_CONTENT=#{faq_content}, FAQ_CATEGORY=#{faq_category} WHERE FAQ_SEQ=#{faq_seq}
+		]]>
+	</update>
+
+	<update id="updateCount">
+		<![CDATA[
+			UPDATE FAQ SET FAQ_COUNT=FAQ_COUNT+1 WHERE FAQ_SEQ=#{faq_seq}
+		]]>
+	</update>
+
+	<delete id="deleteFaq" parameterType="Integer">
+		<![CDATA[
+			DELETE FROM FAQ WHERE FAQ_SEQ=#{seq}
+		]]>
+	</delete>
+	
+	<select id="getFaqTotal" resultType="Integer">
+			<if test="searchCondition == 'FAQ_TITLE'">
+<!-- 				SELECT COUNT(CASE WHEN FAQ_TITLE LIKE CONCAT('%', #{searchKeyword}, '%') THEN 1 END) AS TOTAL FROM FAQ -->
+				SELECT COUNT(*) AS TOTAL FROM FAQ WHERE FAQ_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition == 'FAQ_CONTENT'">
+<!-- 				SELECT COUNT(CASE WHEN FAQ_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%') THEN 1 END) AS TOTAL FROM FAQ -->
+				SELECT COUNT(*) AS TOTAL FROM FAQ WHERE FAQ_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+	</select>
+
+	<select id="getUserFaqTotal" resultType="Integer">
+		SELECT COUNT(*) AS TOTAL FROM FAQ WHERE FAQ_CATEGORY=#{faq_category}
+	</select>
+
+	<select id="getFaq" resultType="faq">
+		<![CDATA[
+			SELECT * FROM FAQ WHERE FAQ_SEQ=#{faq_seq}
+		]]>
+	</select>
+
+	<select id="getFaqList" resultMap="faqResult">
+			SELECT * FROM FAQ WHERE 1 = 1
+			<if test="searchCondition == 'FAQ_TITLE'">
+				AND FAQ_TITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition == 'FAQ_CONTENT'">
+				AND FAQ_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition == 'FAQ_MEM_ID'">
+				AND FAQ_MEM-ID LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			<if test="searchCondition =='FAQ_CATEGORY'">
+				AND FAQ_CATEGORY LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+			ORDER BY FAQ_SEQ DESC LIMIT #{listCnt} OFFSET #{pageNum}
+	</select>
+	
+	<select id="getFaqList_T" resultMap="faqResult">
+		<![CDATA[
+			SELECT * FROM FAQ WHERE FAQ_TITLE LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY FAQ_SEQ DESC
+		]]>
+	</select>
+	
+<!-- 	SELECT * FROM(SELECT SEQ, TITLE, WRITER, @ROWNUM:=@ROWNUM+1 AS rownum FROM BOARD ,(SELECT @ROWNUM:=0) AS R WHERE TITLE LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY SEQ DESC) T LIMIT 14 OFFSET -->
+	
+	<select id="getFaqList_C" resultMap="faqResult">
+		<![CDATA[
+			SELECT * FROM FAQ WHERE FAQ_CONTENT LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY FAQ_SEQ DESC
+		]]>
+	</select>
+
+	<select id="getUserFaqList" resultMap="faqResult">
+			SELECT * FROM FAQ WHERE FAQ_CATEGORY=#{faq_category} ORDER BY FAQ_SEQ DESC LIMIT #{listCnt} OFFSET #{pageNum}
+	</select>
+
+</mapper>

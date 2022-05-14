@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ActivityDAO">
+
+	<resultMap id="activityResult" type="activity">
+		<id property="act_num" column="ACT_NUM"/>
+		<result property="act_mainTitle" column="ACT_MAINTITLE"/>
+		<result property="act_subTitle" column="ACT_SUBTITLE"/>
+		<result property="act_writer" column="ACT_WRITER"/>
+		<result property="act_regdate" column="ACT_REGDATE"/>
+		<result property="act_optName1" column="ACT_OPTNAME1"/>
+		<result property="act_optName2" column="ACT_OPTNAME2"/>
+		<result property="act_optName3" column="ACT_OPTNAME3"/>
+		<result property="act_optName4" column="ACT_OPTNAME4"/>
+		<result property="act_optPrice1" column="ACT_OPTPRICE1"/>
+		<result property="act_optPrice2" column="ACT_OPTPRICE2"/>
+		<result property="act_optPrice3" column="ACT_OPTPRICE3"/>
+		<result property="act_optPrice4" column="ACT_OPTPRICE4"/>
+		<result property="act_content" column="ACT_CONTENT"/>
+		<result property="act_announcement" column="ACT_ANNOUNCEMENT"/>
+		<result property="category_name" column="CATEGORY_NAME"/>
+		<result property="categoryCheck" column="CATEGORYCHECK"/>
+		<result property="act_mainPictureName" column="ACT_MAINPICTURENAME"/>
+		<result property="act_thumbImgName" column="ACT_THUMBIMGNAME"/>
+		<result property="act_inforImgName" column="ACT_INFORIMGNAME"/>
+		<result property="act_announcement" column="ACT_ANNOUNCEMENT"/>
+		<result property="act_address" column="ACT_ADDRESS"/>
+		<result property="act_faq" column="ACT_FAQ"/>
+	</resultMap>
+	
+	<select id="getUserActivityList" resultMap="activityResult">
+			SELECT * FROM ACTIVITY WHERE CATEGORY_NAME=#{category_name}
+	</select>
+	
+	<select id="getUserdetailsPage" resultMap="activityResult">
+		<![CDATA[
+			SELECT * FROM ACTIVITY WHERE ACT_NUM=#{act_num}
+		]]>
+
+	</select>
+	
+
+	<insert id="insertActivity" >
+		<![CDATA[ 
+			INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME,
+			ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3,
+			ACT_OPTPRICE4, ACT_CONTENT, ACT_ANNOUNCEMENT, ACT_ADDRESS, ACT_FAQ, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME,ACT_INFORIMGNAME) 
+			VALUES (#{act_mainTitle}, #{act_subTitle}, #{act_writer}, #{categoryCheck}, #{categoryCheck},
+			#{act_optName1}, #{act_optName2}, #{act_optName3}, #{act_optName4}, #{act_optPrice1}, 
+			#{act_optPrice2}, #{act_optPrice3}, #{act_optPrice4}, #{act_content}, #{act_announcement}, 
+			#{act_address}, #{act_faq}, #{act_thumbImgName}, #{act_mainPictureName},#{act_inforImgName});
+		 ]]>
+	</insert>
+	
+	<update id="updateActivity">
+		<![CDATA[ UPDATE ACTIVITY SET ACT_MAINTITLE=#{act_mainTitle}, ACT_SUBTITLE=#{act_subTitle}, ACT_WRITER=#{act_writer},
+		 CATEGORYCHECK=#{categoryCheck}, ACT_OPTNAME1=#{act_optName1}, ACT_OPTNAME2=#{act_optName2}, ACT_OPTNAME3=#{act_optName3},
+		 ACT_OPTNAME4=#{act_optName4}, ACT_OPTPRICE1=#{act_optPrice1}, ACT_OPTPRICE2=#{act_optPrice2}, ACT_OPTPRICE3=#{act_optPrice3},
+		 ACT_OPTPRICE4=#{act_optPrice4}, ACT_CONTENT=#{act_content}, ACT_ANNOUNCEMENT=#{act_announcement}, 
+		 ACT_ADDRESS=#{act_address}, ACT_FAQ=#{act_faq}, ACT_THUMBIMGNAME=#{act_thumbImgName}, 
+		 ACT_MAINPICTURENAME=#{act_mainPictureName}, ACT_INFORIMGNAME=#{act_inforImgName} WHERE ACT_NUM=#{act_num} ]]>
+	</update>
+
+	<delete id="deleteActivity">
+		<![CDATA[ DELETE FROM ACTIVITY WHERE ACT_NUM = #{act_num}; ]]>
+	</delete>
+	
+	<select id="getActivity" resultType="activity">
+		<![CDATA[
+			SELECT * FROM ACTIVITY WHERE ACT_NUM=#{act_num}
+		]]>
+	</select>
+	<select id="getActivityList" resultMap="activityResult">
+		SELECT * FROM ACTIVITY WHERE 1 = 1
+		<if test="searchCondition == 'ACT_MAINTITLE'"> AND ACT_MAINTITLE LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY ACT_NUM ASC</if>
+		<if test="searchCondition == 'ACT_WRITER'"> AND ACT_WRITER LIKE CONCAT('%', #{searchKeyword}, '%') ORDER BY ACT_NUM ASC</if>
+		LIMIT #{listcnt} OFFSET #{start}
+	</select>
+
+	
+	<select id="countActivity" resultType="int">
+		SELECT COUNT(*) FROM ACTIVITY WHERE 1 = 1
+		<if test="searchCondition == 'ACT_MAINTITLE' "> AND ACT_MAINTITLE LIKE CONCAT('%', #{searchKeyword}, '%') </if>
+		<if test="searchCondition == 'ACT_WRITER' "> AND ACT_WRITER LIKE CONCAT('%', #{searchKeyword}, '%') </if>
+		ORDER BY ACT_NUM ASC
+	</select>
+	
+
+</mapper>

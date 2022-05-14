@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace와 id는 DAO 클래스에서 사용 -->
+<mapper namespace="PurchaseManagerDAO">
+
+	<!--Purchase 관리자 페이지 리스트 -->
+	<select id="purchaseList" resultType="purchaseManager">
+		<![CDATA[
+		select * from PURCHASE
+		LIMIT #{listCnt} OFFSET #{start}
+		]]>
+	</select>
+	
+	<!-- Total 값 - Purchase table -->
+	<select id="getTotal" resultType="Integer">
+		<![CDATA[
+		SELECT COUNT(*) FROM PURCHASE
+		]]>
+	</select>
+	
+	<!-- 결제 취소 - DB update -->
+	<update id="updateState">
+		<![CDATA[
+		UPDATE purchase
+		SET PUR_STATENUM = 0
+		WHERE PUR_MERCHANTID = #{pur_merchantid}
+		]]>
+	</update>
+	
+</mapper>

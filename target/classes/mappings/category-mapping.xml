@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CategoryDAO">
+
+	<resultMap id="categoryResult" type="category">
+		
+		<id property="category_name" column="CATEGORY_NAME"></id>
+		<result property="category_imgName" column="CATEGORY_IMGNAME"/>
+		
+	</resultMap>
+
+	
+	<select id="getCategory" resultType="category">
+		<![CDATA[
+			SELECT * FROM CATEGORY WHERE CATEGORY_NAME=#{category_name}
+		]]>
+	</select>
+
+	<select id="getCategoryList" resultMap="categoryResult">
+			SELECT * FROM CATEGORY
+	</select>
+	
+	<insert id="insertCategory">
+		<![CDATA[
+			INSERT INTO CATEGORY (CATEGORY_NAME, CATEGORY_IMGNAME) VALUES (#{category_name}, #{category_imgName})
+		]]>
+	</insert>
+	
+	<update id="updateCategory">
+		<![CDATA[ UPDATE CATEGORY SET CATEGORY_NAME=#{category_name} ]]>
+	</update>
+	
+	<delete id="deleteCategory">
+		<![CDATA[ DELETE FROM CATEGORY WHERE CATEGORY_NAME = #{category_name} ]]>
+	</delete>
+	
+	<select id="getCategoryCnt" resultType="int">
+		<![CDATA[ SELECT count(*) FROM CATEGORY WHERE CATEGORY_NAME = #{category_name} ]]>
+	</select>
+
+
+</mapper>

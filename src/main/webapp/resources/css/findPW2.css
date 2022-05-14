@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+.pc .main-menu {
+	display: none !important;
+}
+
+.findPW{
+	width: 70%;
+	margin:50px auto; 
+	padding:0;
+	background-color: #FFF;
+	font-size:14px;
+	display:flex;
+	flex-direction:column;
+	/* margin-top: 100px; */
+	font-weight: bold;
+}
+
+.findPW h2 { 
+	color: #000000; 
+	margin-top: 100px;
+	font-size: 22px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findPW h1 { 
+	color: #000000; 
+	line-height: 40px;
+	font-size: 30px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.br-span {
+	display: none;
+}
+
+.findPW h3 {
+	font-size: 18px;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-bottom: 15px;
+}
+
+.la {
+  margin-bottom: 0;
+  color:#8a8d8d;
+  padding-left: 0px;
+}
+
+.sign-inner-div {
+	margin: 0px 10px;
+}
+
+.sign-inner-input {
+	width: 100%;
+}
+
+.inner-div-col {
+	padding: 0px;
+}	
+
+.phonenumber {
+	margin: 15px 10px 15px 5px;
+	height: 45px;
+	align-items: center;
+	color:#666666;
+	font-size: 14px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.phonenumber input {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.phonenumber select {
+	width: 100%;
+	height: 35px;
+	background: #f0f0f0;
+	outline-style: none;
+	border: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	padding-left: 10px;
+}
+
+.phonenumber button {
+	width: 100%;
+	height: 35px;
+	background: #ffffff;
+	border: 2px solid #FE6400;
+	border-radius: 5px;
+	color: #FE6400;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	padding: 0;
+
+}
+
+.phone-group {
+	margin: 0px;
+}
+
+.phone-group-input {
+	 display: flex;
+	 align-items: center;
+}
+
+.phone-group input {
+	margin: 0px;
+}
+
+.number {
+	margin: 15px 10px 15px 5px;
+	height: 45px;
+	align-items: center;
+	color:#666666;
+	font-size: 14px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.number .la {
+	margin: 0px;
+}
+
+.number input {
+	width: 25%;
+	height: 35px;
+	text-align:center;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+.number .row {
+	display: flex;
+	align-items: center;
+	margin: 0px;
+}
+
+
+select:focus{
+	background: #ffffff;
+	box-shadow: 0 0 0 1px #5f04f9;
+}
+
+input:focus {
+	background: #ffffff;
+	box-shadow: 0 0 0 1px #5f04f9;
+}
+
+.subject_underline {
+	margin-bottom: 5px;
+	border-bottom: solid 1px #000000;
+}	
+
+.subject_underline2 {
+	border-bottom: solid 1px #c0c0c0;
+
+}
+
+.point{
+	/* 인증 번호 */
+	color: #5F04F9;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	padding: 0 15px;
+}
+
+.submit {
+	text-align: center;
+	padding: 60px;
+ 	width: 100%;
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+		
+.submit input {
+	width: 150px;
+	height: 50px;
+	border: 0;
+	outline: none;
+	border-radius: 5px;
+	background: #5F04F9;
+	color: white;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+}
+
+
+
+@media screen and (max-width:767px) {
+	.findPW {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:991px) {
+	.br-span {
+		display: inline;
+	}
+}
+
+@media screen and (max-width:575px) {	
+	h1, h2, h3 {
+		padding-left: 20px;
+	}
+	
+	.findPW h1 {
+		font-size: 28px;
+	}
+	
+	.findPW h2 {
+		margin-top: 30px;
+	}
+	
+	.la {
+		padding-left : 10px;
+		padding-right: 0;
+		font-size: 15px;
+	}
+	
+	.sm-display-block-div {
+		display: block !important; 
+	}
+	
+	.phone-group {
+		width: 125%;
+		margin: 10px 10px;
+	}
+	
+	.number input {
+		width: 30%;
+		height: 45px;	
+		margin: 10px 0px 10px 10px;
+		font-size: 15px;
+	}
+	
+	.phonenumber select, .phone-group input, .phonenumber button {
+		height: 45px;
+		font-size: 15px;
+	}
+	
+	.subject_underline2 {
+		border-bottom: solid 1px #c0c0c0;
+		margin-top : 50px;
+	}
+	
+	.number, .phonenumber {
+		margin: 15px 10px;
+	}
+	
+}
+
+@media screen and (max-width:379px) {
+	.point {
+		font-size: 13px;
+	}
+}

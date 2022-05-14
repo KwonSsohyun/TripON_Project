@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="PersonalInformationDAO">
+
+	<resultMap id="personalInformationResult" type="personalInformation">
+		<id property="mem_id" column="MEM_ID"></id>
+		<result property="mem_pw" column="MEM_PW"></result>
+		<result property="mem_nickname" column="MEM_NICKNAME"></result>
+		<result property="mem_phone" column="MEM_PHONE"></result>
+	</resultMap>
+
+	<update id="updateMem_pw">
+		<![CDATA[
+			UPDATE MEMBER SET MEM_PW=#{mem_pw} WHERE MEM_ID=#{mem_id}
+		]]>
+	</update>
+
+	<update id="updateMem_nickname">
+		<![CDATA[
+			UPDATE MEMBER SET MEM_NICKNAME=#{mem_nickname} WHERE MEM_ID=#{mem_id}
+		]]>
+	</update>
+
+	<update id="updateMem_phone">
+		<![CDATA[
+			UPDATE MEMBER SET MEM_PHONE=#{mem_phone} WHERE MEM_ID=#{mem_id}
+		]]>
+	</update>
+
+	<select id="getMember" parameterType="String" resultMap="personalInformationResult">
+		<![CDATA[
+			SELECT MEM_ID, MEM_NICKNAME, MEM_PW, MEM_PHONE FROM MEMBER WHERE MEM_ID=#{userId}
+		]]>
+	</select>
+	
+	<select id="checkNickname" parameterType="String" resultType="Integer">
+		<![CDATA[
+			SELECT COUNT(*) FROM MEMBER WHERE MEM_NICKNAME=#{nickname}
+		]]>
+	</select>
+	
+	<select id="getReservationList" parameterType="String" resultType="personalInformation">
+		<![CDATA[
+			SELECT PUR_NUM, PUR_STATENUM, PUR_IMPID, PUR_MERCHANTID, PUR_BOOKINGDATE, PUR_ACT_TITLE, PUR_OPT_NAME_1, PUR_OPT_NAME_2, PUR_OPT_NAME_3, PUR_OPT_NAME_4, PUR_OPT_COUNT_1, PUR_OPT_COUNT_2, PUR_OPT_COUNT_3, PUR_OPT_COUNT_4, PUR_PRICE FROM PURCHASE WHERE PUR_USER_ID = #{userId}
+		]]>
+	</select>
+	
+	<select id="getActivityInformation" parameterType="String" resultType="personalInformation">
+		<![CDATA[
+			SELECT ACT_NUM, ACT_MAINPICTURENAME FROM ACTIVITY WHERE ACT_MAINTITLE=#{act_title}
+		]]>
+	</select>
+	
+	<select id="getPurchaseInformation" resultType="personalInformation">
+		<![CDATA[
+			SELECT PUR_BOOKINGDATE FROM PURCHASE WHERE PUR_STATENUM=1 AND PUR_USER_ID=#{mem_id} AND PUR_ACT_TITLE=#{act_mainTitle}
+		]]>
+	</select>
+	
+	<update id="updatePurchase" parameterType="Integer">
+		<![CDATA[
+			UPDATE PURCHASE SET PUR_STATENUM=0 WHERE PUR_NUM=#{pur_num};
+		]]>
+	</update>
+	
+	<delete id="deletePurchase" parameterType="Integer">
+		<![CDATA[
+			DELETE FROM PURCHASE WHERE PUR_NUM=#{pur_num}
+		]]>
+	</delete>
+
+</mapper>

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.hc{
+	margin-bottom : 20px;
+}
+.pc .main-menu {
+	display: none !important;
+}
+
+.findID{
+	width: 70%;
+	margin:50px auto; 
+	padding:0;
+	background-color: #FFF;
+	font-size:14px;
+	display:flex;
+	flex-direction:column;
+	/* margin-top: 100px; */
+}
+
+.findID h2 {
+	margin-top: 100px;
+	color: #000000; 
+	font-size: 22px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findID h1 {
+	color: #000000; 
+	line-height: 45px;
+	font-size: 30px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findID h3 {
+	font-size: 18px;
+	font-weight:bold;
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-bottom: 15px;
+}
+
+.findID h4 {
+	font-size: 20px;
+	color: #8b8b8b;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findID h5 {
+	font-size: 22px;
+	font-weight:bold;
+	color: #5F04F9;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.br-span {
+	display: none;
+}
+
+.subject_underline {
+	margin-bottom: 5px;
+	border-bottom: solid 1px #000000;
+
+}	
+
+.subject_underline2 {
+	margin-top: 30px;
+	border-bottom: solid 1px #c0c0c0;
+
+}			
+
+.submit {
+	text-align: center;
+	padding: 50px;
+/*  	margin-bottom : 60px; */
+}
+		
+.submit input {
+	width: 100px;
+	height: 50px;
+	border: 0;
+	outline: none;
+	border-radius: 5px;
+	background: #5F04F9;
+	color: white;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+@media screen and (max-width:767px) {
+	.findID {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:575px) {	
+	h1, h2, h3, h4, h5 {
+		padding-left: 20px;
+	}
+	
+	.findID h1 {
+		font-size: 28px;
+	}
+	
+	.findID h2 {
+		margin-top: 30px;
+	}
+	
+	.hc {
+		font-size: 14px;
+	}
+	
+	.br-span {
+		display: inline;
+	}
+	
+}

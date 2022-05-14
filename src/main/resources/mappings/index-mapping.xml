@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="IndexDAO">
+
+	<select id="getCategoryNames" parameterType="String" resultType="String">
+		SELECT CATEGORY_NAME FROM CATEGORY WHERE CATEGORY_NAME LIKE CONCAT('%', #{searchKeyword}, '%')
+	</select>
+	
+	<select id="getActivityMaintitles" parameterType="String" resultType="String">
+		SELECT ACT_MAINTITLE FROM ACTIVITY WHERE ACT_MAINTITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+	</select>
+	
+	<select id="getPopularCategory" resultType="category">
+		SELECT * FROM CATEGORY LIMIT 4
+	</select>
+	
+	<select id="getPopularActivity" resultType="activity">
+		SELECT * FROM ACTIVITY LIMIT 4
+	</select>
+	
+	<select id="getIndexNoticeList" resultType="notice">
+		SELECT NTC_SEQ, NTC_TITLE, DATE_FORMAT(NTC_REGDATE, '%Y-%m-%d') AS NTC_REGDATEFORMAT FROM NOTICE LIMIT 3
+	</select>
+	
+	<select id="getUserNotice" resultType="notice">
+		SELECT * FROM NOTICE WHERE NTC_SEQ=#{ntc_seq}
+	</select>
+	
+	<select id="getUserNoticeCount" resultType="notice">
+		SELECT COUNT(*) AS TOTAL FROM NOTICE WHERE NTC_SEQ=#{ntc_seq}
+	</select>
+	
+	<select id="getSearchCategoryList" resultType="category">
+		SELECT * FROM CATEGORY WHERE CATEGORY_NAME LIKE CONCAT('%', #{searchKeyword}, '%')
+	</select>
+	
+	<select id="getSearchActiviryList" resultType="activity">
+		SELECT * FROM ACTIVITY WHERE ACT_MAINTITLE LIKE CONCAT('%', #{searchKeyword}, '%')
+	</select>
+	
+</mapper>

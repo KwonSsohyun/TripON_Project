@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+* {margin: 0;padding: 0;}
+body {background-color: #f7f7f9 !important;}
+body, input {
+    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+li {list-style: none;}
+a {text-decoration: none;}
+img {
+    vertical-align: top;
+    font-size: 0;
+    border: 0;
+}
+.display-4{
+	font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+	
+/* ================ Section ================ */
+#jumbotron {
+    background: url("../imgs/world_jumbo.jpeg") no-repeat center;
+    background-size: cover;
+    width: 80%;
+    padding: 10rem 0;
+    margin: 0 auto;
+}
+#jumbotron .container h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+.content-body {margin: 5% 0;}
+.item {     /* 카테고리박스 */
+    border-radius: 15px;
+    padding: 8px;
+    margin: 2rem;
+    box-shadow: 3px 3px 3px #f0f2f4;
+}
+#card img {
+	border: 1px solid #f2f2f2;
+	height: 14rem;
+}
+#card:hover {box-shadow: 1px 1px 3px #333;}
+.card-body {
+    height: auto;
+    margin: auto;
+    padding: auto;
+}
+
+.searchResult-title {
+	margin: 0px 15px;
+	padding: 0px 0px 10px 0px;
+    font-family: "Noto Sans KR", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #c2c2c2;
+}
+.searchResult-message {
+	padding: 80px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width:768px) {
+	
+	.searchResult-title {
+		margin: 0px 30px;
+	}
+	
+	
+	#jumbotron {
+    background: url("../imgs/world_jumbo.jpeg") no-repeat center;
+    background-size: cover;
+   	width: 100%;
+	height: 1rem;
+	}
+	
+}
+
+@media screen and (max-width:992px) {
+	#jumbotron {
+	    background: url("../imgs/world_jumbo.jpeg") no-repeat center;
+	    background-size: cover;
+	    width: 100%;
+	    height: 8rem;
+
+	}
+	
+	#jumbotron .container h1 {
+	    text-align: center;
+	    font-weight: bold;
+	    color: #fff;
+	}
+	
+}

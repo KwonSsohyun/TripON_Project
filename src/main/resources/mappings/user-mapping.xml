@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="UserDAO">
+
+	<resultMap id="userResult" type="user">
+		<id property="mem_seq" column="MEM_SEQ"></id>
+		<result property="mem_id" column="MEM_ID"></result>
+		<result property="mem_pw" column="MEM_PW"></result>
+		<result property="mem_username" column="MEM_USERNAME"></result>
+		<result property="mem_nickname" column="MEM_NICKNAME"></result>
+	</resultMap>
+
+	<select id="idCheck" resultType="int">
+		<![CDATA[
+			SELECT COUNT(MEM_ID) FROM MEMBER WHERE MEM_ID=#{mem_id}
+		]]>
+	</select>
+
+	<insert id="insertMem">
+			INSERT INTO MEMBER (MEM_ID, MEM_PW, MEM_USERNAME, MEM_NICKNAME, MEM_PHONE, MEM_EMAIL, MEM_ADDRESS) VALUES (#{mem_id}, #{mem_pw}, #{mem_username}, #{mem_nickname}, 
+			<if test="mem_address_01 == ''">
+				CONCAT(#{mem_phone_01},#{mem_phone_02},#{mem_phone_03}), #{mem_email}, CONCAT(#{mem_address_01}, #{mem_address_02}, #{mem_address_03}))
+			</if>
+			<if test="mem_address_01 != ''">
+				CONCAT(#{mem_phone_01},#{mem_phone_02},#{mem_phone_03}), #{mem_email}, CONCAT(#{mem_address_01},',', #{mem_address_02},',', #{mem_address_03}))
+			</if>
+	</insert> 
+	
+	
+	
+	<insert id="updateMemPw">
+		<![CDATA[
+			UPDATE MEMBER SET MEM_PW=#{mem_pw} WHERE MEM_ID=#{mem_id}
+		]]>
+	</insert> 
+	
+	
+	
+
+	<select id="selectMemLogin" resultType="user">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE MEM_ID=#{mem_id} AND MEM_PW=#{mem_pw}
+		]]>
+	</select>
+	
+	
+	<select id="selectMemLoginId" resultType="user">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE MEM_ID=#{mem_id}
+		]]>
+	</select>
+	
+	
+	<select id="selectMemLoginPh" resultType="user">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE MEM_PHONE=#{mem_phone} AND MEM_ID=#{mem_id}
+		]]>
+	</select>
+	
+	
+	
+	
+	
+	<select id="selectKakaoMemId" resultType="user">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE MEM_ID=#{kakao_mem_id}
+		]]>
+	</select>
+	
+	<insert id="insertKakaoMem_ex_nx">
+		<![CDATA[
+			insert into member (MEM_ID, MEM_PW, MEM_NICKNAME, MEM_FLAG) values (#{kakao_mem_id}, #{kakao_mem_pw}, UNIX_TIMESTAMP(), 'kakao')
+		]]>
+	</insert> 
+	
+	<insert id="insertKakaoMem_ex_no">
+		<![CDATA[
+			insert into member (MEM_ID, MEM_PW, MEM_NICKNAME, MEM_FLAG) values (#{kakao_mem_id}, #{kakao_mem_pw}, #{kakao_mem_nickname}, 'kakao')
+		]]>
+	</insert> 
+	
+	<insert id="insertKakaoMem_eo_nx">
+		<![CDATA[
+			insert into member (MEM_ID, MEM_PW, MEM_NICKNAME, MEM_EMAIL, MEM_FLAG) values (#{kakao_mem_id}, #{kakao_mem_pw}, UNIX_TIMESTAMP(), #{kakao_mem_email}, 'kakao')
+		]]>
+	</insert> 
+	
+	<insert id="insertKakaoMem_eo_no">
+		<![CDATA[
+			insert into member (MEM_ID, MEM_PW, MEM_NICKNAME, MEM_EMAIL, MEM_FLAG) values (#{kakao_mem_id}, #{kakao_mem_pw}, #{kakao_mem_nickname}, #{kakao_mem_email}, 'kakao')
+		]]>
+	</insert> 
+
+
+
+	<select id="selectNaverMemId" resultType="user">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE MEM_EMAIL=#{naver_mem_email} AND MEM_FLAG='naver'
+		]]>
+	</select>
+	
+	<insert id="insertNaverMem_nx">
+		<![CDATA[
+			insert into member (MEM_ID, MEM_PW, MEM_USERNAME, MEM_NICKNAME, MEM_EMAIL, MEM_FLAG) values (UNIX_TIMESTAMP(), UNIX_TIMESTAMP(), #{naver_mem_username}, UNIX_TIMESTAMP(), #{naver_mem_email}, 'naver')
+		]]>
+	</insert> 
+	
+		<insert id="insertNaverMem_no">
+		<![CDATA[
+			insert into member (MEM_ID, MEM_PW, MEM_USERNAME, MEM_NICKNAME, MEM_EMAIL, MEM_FLAG) values (UNIX_TIMESTAMP(), UNIX_TIMESTAMP(), #{naver_mem_username}, #{naver_mem_nickname}, #{naver_mem_email}, 'naver')
+		]]>
+	</insert> 
+
+
+
+
+
+
+
+
+
+	<select id="selectMemId" resultType="user">
+		SELECT *
+		FROM MEMBER
+		WHERE MEM_USERNAME=#{mem_username}
+		<if test="mem_phone_02 != '' ">
+			AND MEM_PHONE=CONCAT(#{mem_phone_01}, #{mem_phone_02}, #{mem_phone_03})
+		</if> 
+		<if test="mem_email != '' ">
+			AND MEM_EMAIL=#{mem_email}
+		</if>
+	</select>
+	
+	<select id="selectMemPw" resultType="user">
+		<![CDATA[
+			 SELECT * FROM MEMBER WHERE MEM_ID=#{mem_id}
+		]]>
+	</select>
+
+
+
+	<select id="selectUserList" resultType="user">	
+	SELECT * FROM MEMBER WHERE MEM_IS_SUPER='N'			
+	<if test="searchCondition == 'MEM_ID'"> AND MEM_ID LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+	<if test="searchCondition == 'MEM_USERNAME'"> AND MEM_USERNAME LIKE CONCAT('%', #{searchKeyword} ,'%') 	</if>
+	<if test="searchCondition == 'MEM_NICKNAME'"> AND MEM_NICKNAME LIKE CONCAT('%', #{searchKeyword} ,'%') 	</if>			 
+	ORDER BY MEM_SEQ DESC LIMIT #{listcnt} OFFSET #{start}		
+	</select>
+	
+	<select id="selectAdminList" resultType="user">			
+		SELECT * FROM MEMBER WHERE MEM_IS_SUPER='Y'
+		<if test="searchCondition == 'MEM_ID'"> AND MEM_ID LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+		<if test="searchCondition == 'MEM_USERNAME'"> AND MEM_USERNAME LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+		<if test="searchCondition == 'MEM_NICKNAME'"> AND MEM_NICKNAME LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+		ORDER BY MEM_SEQ DESC LIMIT #{listcnt} OFFSET #{start}	
+	</select>
+	
+	<select id="selectUserOne" resultType="user">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE MEM_IS_SUPER='N' AND MEM_SEQ=#{mem_seq}
+		]]>
+	</select>
+	
+	<select id="selectAdminOne" resultType="user">
+		<![CDATA[
+			SELECT * FROM MEMBER WHERE MEM_IS_SUPER='Y' AND MEM_SEQ=#{mem_seq}
+		]]>
+	</select>
+	
+	<insert id="insertUser">
+			INSERT INTO MEMBER (MEM_ID, MEM_PW, MEM_USERNAME, MEM_NICKNAME, MEM_PHONE, MEM_EMAIL, MEM_ADDRESS, MEM_IS_SUPER) 
+			VALUES (#{mem_id}, #{mem_pw}, #{mem_username}, #{mem_nickname},
+			<if test="mem_address_01 == ''">
+				CONCAT(#{mem_phone_01},#{mem_phone_02},#{mem_phone_03}), #{mem_email}, CONCAT(#{mem_address_01}, #{mem_address_02}, #{mem_address_03}), 'Y')
+			</if>
+			<if test="mem_address_01 != ''">
+				CONCAT(#{mem_phone_01},#{mem_phone_02},#{mem_phone_03}), #{mem_email}, CONCAT(#{mem_address_01},',', #{mem_address_02},',', #{mem_address_03}), 'Y')
+			</if>
+		
+	</insert>
+	
+	<delete id="deleteUser">
+		<![CDATA[
+			DELETE FROM MEMBER WHERE MEM_ID=#{mem_id}
+		]]>
+	</delete>
+	
+	<update id="updateUser">
+			UPDATE MEMBER 
+			SET MEM_PW=#{mem_pw}, MEM_USERNAME=#{mem_username}, 
+			MEM_NICKNAME=#{mem_nickname}, 
+			MEM_PHONE=CONCAT(#{mem_phone_01},#{mem_phone_02},#{mem_phone_03}) , 
+			MEM_EMAIL=#{mem_email}, 
+			<if test="mem_address_01 == ''">
+				MEM_ADDRESS=CONCAT(#{mem_address_01}, #{mem_address_02}, #{mem_address_03})
+			</if>
+			<if test="mem_address_01 != ''">
+				MEM_ADDRESS=CONCAT(#{mem_address_01},',', #{mem_address_02},',', #{mem_address_03})
+			</if>
+			WHERE MEM_ID=#{mem_id}
+			
+	</update>
+	
+	<!-- 일반회원 총 회원수 출력 -->
+	<select id="countUser" resultType="int">
+		SELECT COUNT(*) FROM MEMBER  WHERE MEM_IS_SUPER='N' 
+		<if test="searchCondition == 'MEM_ID'"> AND MEM_ID LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+		<if test="searchCondition == 'MEM_USERNAME'"> AND MEM_USERNAME LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+		<if test="searchCondition == 'MEM_NICKNAME'"> AND MEM_NICKNAME LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+	</select>
+	
+	<!-- 관리자 총 회원수 출력 -->
+	<select id="countAdmin" resultType="int">
+		SELECT COUNT(*) FROM MEMBER  WHERE MEM_IS_SUPER='Y'
+		<if test="searchCondition == 'MEM_ID'"> AND MEM_ID LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+		<if test="searchCondition == 'MEM_USERNAME'"> AND MEM_USERNAME LIKE CONCAT('%', #{searchKeyword} ,'%') </if>
+		<if test="searchCondition == 'MEM_NICKNAME'"> AND MEM_NICKNAME LIKE CONCAT('%', #{searchKeyword} ,'%') </if> 
+	</select>
+
+</mapper>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+* {
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.ntcmng {
+  width: 100%;
+  padding: 0px;
+  float: left;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_flex {
+	padding: 30px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+.menu_flex h2 {
+	margin-bottom: 70px;
+	color: #454545;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.newntcbtn {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: right;
+/* 	margin: 0px 10px 0px -1px; */
+/* 	margin-top: 20px; */
+/* 	margin: 0px !important; */
+}
+#line-black {
+	color: black;
+}
+.insertList {
+	width: 100%;
+	padding: 50px;
+	background-color: #FFF;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+table, td {
+  border:1px solid #dddddd;
+  text-align: center;
+}
+
+td {
+	color: black;
+}
+table {
+  width: 100%;
+}
+table > tr > td {
+  width: 100px;
+}
+textarea {
+	resize: none;
+}
+.form-group {
+  margin: 0px;
+}
+.form-control {
+	border-style: none;
+}
+.form-control:focus {
+	box-shadow: none;
+}
+.file-delete-btn {
+	height: 20px;
+	border: none;
+	background: none;
+}
+.file-delete-btn:hover {
+	color: #666;
+}
+.origin-file-none {
+	height: 30px;
+	line-height: 30px;
+}
+.savebtn {
+  margin-top: 20px;
+  justify-content: right;
+  display: flex;
+}
+#target-select {
+	outline: none;
+	width: 100%;
+	border-style: none;
+}
+.file-input {
+	padding: 1px;
+	width: 100%;
+}
+.file-input::file-selector-button {
+	padding: 8px 6px;
+	border-style: none !important;
+	border-radius: 2px;
+	background-color: #eee;
+	transition: 0.5s;
+	margin-right: 10px;
+}
+.file-input::file-selector-button:hover {
+	background-color: #ddd;
+}
+#comment {
+	resize: none;
+}
+.btn-default {
+	margin: 0px;
+}
+.btn:focus {
+	box-shadow: none !important;
+}
+@media screen and (max-width:620px) {
+	.insertList{
+		padding: 50px 10px;
+	}
+	}

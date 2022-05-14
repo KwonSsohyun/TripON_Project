@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+.pc .main-menu {
+	display: none !important;
+}
+
+.findPW{
+	font-weight: bold;
+	width: 70%;
+	margin:50px auto; 
+	padding:0;
+	background-color: #FFF;
+	font-size:14px;
+	display:flex;
+	flex-direction:column;
+	/* margin-top: 100px; */
+	color:#8a8d8d;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findPW h2 { 
+	color: #000000; 
+	margin-top: 100px;
+	font-size: 22px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.findPW h1 { 
+	color: #000000; 
+	line-height: 40px;
+	font-size: 30px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.br-span {
+	display: none;
+}
+
+.subject_underline {
+	border-bottom: solid 1px #000000;
+}	
+
+.subject_underline2 {
+	margin-top : -10px;
+	border-bottom: solid 1px #c0c0c0;
+}	
+
+.information {
+	margin-top: 5px;
+	margin-bottom: 35px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.find-inner-div {
+	margin: 0px 10px;
+}		
+
+.find-inner-input {
+	width: 100%;
+}
+
+.inner-div-col {
+	padding: 0px;
+	
+}
+
+.information label {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+}
+
+.userid {
+	margin-top: 20px;
+}
+
+.userid input {
+	width: 95%;
+	height: 35px;
+	margin: 10px 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px 10px;
+	border: 1px solid #f0f0f0;
+	background-color: #f0f0f0;
+	outline-style: none;
+	color: #000000;
+	font-family: 'Noto Sans KR', sans-serif;
+	
+}
+
+input:focus {
+	background: #ffffff;
+	box-shadow: 0 0 0 1px #5f04f9;
+}
+
+.submit {
+	text-align: center;
+	padding: 60px;
+ 	width: 100%;
+ 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+		
+.submit input {
+	width: 150px;
+	height: 50px;
+	border: 0;
+	outline: none;
+	border-radius: 5px;
+	background: #5F04F9;
+	color: white;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+}
+
+@media screen and (max-width:767px) {
+	.find-inner-input {
+		font-size: 12px;
+	}
+	.findPW {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:575px) {
+	.findPW h2 {
+		padding-left: 20px;
+		margin-top: 30px;
+	}
+	.findPW h1 {
+		padding-left: 20px;
+		font-size: 28px;
+	}
+	
+	.information label, .inner-div-col {
+		padding-left: 10px;
+		font-size: 16px;
+	}
+	
+	.userid input {
+		width: 170%;
+		font-size: 16px;	
+		height: 45px;		
+	}
+	
+	.find-inner-div {
+		display: block !important ;
+	}	
+	
+	.br-span {
+		display: inline;
+	}
+	
+}
+
+@media screen and (max-width:490px) {
+	.findPW h1 {
+		padding-left: 20px;
+		font-size: 26px;
+	}
+	
+}

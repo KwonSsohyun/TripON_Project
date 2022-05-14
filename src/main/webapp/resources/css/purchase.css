@@ -1,0 +1,328 @@
+@charset "UTF-8";
+* {
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.con1 {
+    padding-left: 0px;
+}
+.con2 {
+    padding-left: 25px;
+}
+.conUser {
+    /* margin-bottom: 30px; */
+    /* border-top: 5px solid #5F04F9;
+    border-bottom: 5px solid #5F04F9; */
+    padding: 20px ;
+}
+.productCon {
+	width: 740px;
+    padding-left: 30px;
+    display: flex;
+}
+.product {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+.product > div > p, .conUser > p {
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+.user {
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+    border-right: 1px solid black;
+}
+.buttons {
+    text-align: center;
+    padding: 100px 0px;
+}
+#productImg {
+    height: 200px;
+}
+.inputText {
+    margin-top: 30px;
+    padding: 0px 20px;
+}
+.inputText > input {
+    width: 200px;
+    height: 30px;
+    /* margin: 30px 0px;
+    padding: 0px; */
+}
+.errormessage {
+    margin-bottom: 6px;
+    color: red;
+    visibility: hidden;
+}
+.email-input-group {
+    display: flex;
+    /* margin: 30px 0px; */
+}
+.email-input-group > input {
+    height: 30px;
+}
+.user > li {
+    padding: 0px;
+    list-style: none;
+    height: 30px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+}
+#finalPurchase > p {
+    margin: 0px;
+}
+#finalPurchase > p:first-child {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+#finalPurchase > div{
+    text-align: right;
+}
+#finalPurchase > #purchaseCheck {
+    text-align: left;
+}
+#finalprice {
+    font-size: 25px;
+    font-weight: bold;
+    color: #5f04f9;
+}
+/* #purchaseCheck > input {
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    zoom: 1.5;
+} */
+#purchaseTitle {
+    border-radius: 20px;
+    font-size: 40px; 
+}
+#secondBox {
+    margin-bottom: 20px;
+    display: flex;
+}
+#secondBox > div:first-child {
+    margin-left: 0px;
+}
+#userinput {
+    padding: 20px;
+    border: 1px solid black;
+    /* background-color: gray; */
+    display: flex;
+}
+#afterEmail {
+    margin: 0px !important;
+}
+#purchaseBox {
+    /* background-color: lightgray; */
+    border-radius: 10px; 
+}
+#purchaseButton {
+    margin: 10px;
+}
+#purchaseButton > a:nth-child(1) {
+    /* background-color: #5F04F9; */
+    background-color: gray;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+#purchaseButton > a:last-child {
+    background-color: darkgray;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+b {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+#purchaseCheck {
+    display: flex;
+}
+#purchaseCheck > label {
+    font-size: 13px;
+}
+.secondBoxUser {
+    padding: 0px;
+}
+/* input[type=checkbox] {
+    display: none;
+} */
+input[type=checkbox]{
+    display: none !important;
+}
+input[type=checkbox] + label {
+    display: inline-block;
+    background-position: center;
+    background: url("../imgs/cheak_N.png") 0 0 no-repeat;
+    background-size: 24px; 
+    width: 30px; 
+    height: 24px; 
+    cursor:pointer; 
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+input[type=checkbox]:checked + label {
+    background: url("../imgs/cheak_Y.png") 0 0 no-repeat;
+    background-size: 24px; 
+}
+/* #userline {
+    border-left: 1px solid black;
+    margin-bottom: 70px;
+} */
+#productNameLine {
+	display: flex;
+}
+#productDetailLine {
+	display: flex;
+}
+.productCount {
+	color: #999999;
+	font-weight: lighter;
+}
+
+
+@media only screen and (max-width : 991px) and (min-width : 576px) {
+    img {
+        display: none;
+    }
+    .productContext {
+        /* display: block; */
+        display: flex !important;
+    }
+    #secondBox {
+        display: block;
+    }
+    .con2 {
+        text-align: center;
+    }
+    .conUser p {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .productPrice {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        /* height: 100px; */
+    }
+    .user {
+        padding-left: 30px;
+        width: 150px;
+    }
+    input[type=text] {
+        width: 100px;
+    }
+    /* #userinput {
+        margin-bottom: 100px;
+    } */
+    .secondBoxUser {
+        border: 0px;
+        padding: 0px;
+    }
+    input[type=checkbox] + label {
+        width: 24px; 
+        height: 24px; 
+        margin-top: 5px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    #purchaseCheck {
+        margin-left: 5px;
+    }
+    #userline {
+        margin-bottom: 20px;
+    }
+    #purchaseCheck span {
+        display: none;
+    }
+    #checklabel {
+        margin-top: 5px;
+    }
+    #finalPurchase p {
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    img {
+        display: block;
+    }
+    .productContext {
+        display: flex;
+    }
+    /* .conUser {
+        border-bottom: 1px solid gray;
+    } */
+    .blankbox {
+        padding: 0px !important;
+        max-width: 50px;
+        margin: 0px auto;
+    }
+    /* #userinput {
+        border: 1px solid black;
+        height: 280px;
+        padding-top: 60px;
+    } */
+    .conUser {
+        border: 0px;
+    }
+    .conUser p {
+        font-size: 30px;
+    }
+    
+}
+
+@media only screen and (max-width : 575px){
+	.user{
+		width: 75px;
+	}
+	#purchaseTitle > p {
+		padding-left : 20px;
+	}
+	.con2, .productPrice{
+		display: none;
+	}
+	#secondBox{
+		display: block;
+	}
+	#inputText {
+		display: flex;
+	}
+	.email-input-group span, #afterEmail, #emailSelect {
+		display: none;
+	}
+	.inputText > input {
+		width: auto;
+	}
+}
+
+@media only screen and (max-width : 390px){
+	.inputText > input, #beforeEmail {
+		width: 200px;
+	}
+	.errormessage {
+		font-size: 90%;
+		margin-bottom: 9px;
+	}
+	#purchaseTitle {
+		margin-top: 20px;
+	}
+}

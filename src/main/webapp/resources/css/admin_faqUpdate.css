@@ -1,0 +1,67 @@
+@charset "UTF-8";
+* {
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.menu_flex {
+	padding: 30px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+.menu_flex h2 {
+	margin-bottom: 70px;
+	color: #454545;
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.newfaqbtn {
+	display: flex;
+	justify-content: right;
+	margin: 0px 0px 10px;
+}
+table {
+	width: 100%;
+}
+table, td {
+  border:1px solid #dddddd;
+  text-align: center;
+}
+table > tr > td {
+	width: 100px;
+}
+.form-group {
+	margin: 0px;
+}
+.form-control {
+	border-style: none;
+}
+.form-control:focus {
+	box-shadow: none;
+}
+.form-control:active {
+	box-shadow: none;
+}
+textarea {
+	resize: none;
+}
+.btn {
+	box-shadow: none !important;
+}
+.ctg {
+	padding: 8px 0px;
+}
+input[type="radio"] {
+	margin-left: 20px;
+	margin-right: 10px;
+}
+.insertList {
+	width: 100%;
+	padding: 50px;
+	background-color: #FFF;
+}
+.savebtn {
+	display: flex;
+	justify-content: right;
+	margin-top: 20px;
+}
