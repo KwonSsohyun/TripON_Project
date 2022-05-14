@@ -48,8 +48,10 @@
 			var scrollLocation = $(document).scrollTop();
 			if(here == scrollLocation) {
 				$('.up-button').css('right', '-51px');
+				$('.admin-button').css('right', '-51px');
 			} else {
 				$('.up-button').css('right', '20px');
+				$('.admin-button').css('right', '20px');
 			}
 		});
 		$('.up-button').click(function() {
@@ -57,6 +59,12 @@
 		});
 	});
 </script>
+<% if(session.getAttribute("isSuper") != null && session.getAttribute("isSuper").equals("Y")) { %>
+<div class="admin-button" onclick="location.href='admin/manager_index'">
+	<div class="material-icons admin-button-icons">home</div>
+	<div class="admin-button-text">ADM</div>
+</div>
+<% } %>
 <div class="up-button">
 	<div class="material-icons up-button-icons">arrow_forward_ios</div>
 	<div class="up-button-text">TOP</div>
