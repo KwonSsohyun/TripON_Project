@@ -24,17 +24,17 @@
 · 8명 
 <br>
 
-|                    이름                      |          포지션 및 담당 파트        |                              
-| :-----------------------------------------: | :----------------------------------------------:|
-|  [권소현](https://github.com/KwonSsohyun)    |  전체총괄 / 디자인총괄 / 회원가입 / 로그인         |
-|  [김예찬](https://github.com/KwonSsohyun)    |          전체총괄 / 마이페이지 / 고객센터         | 
-|  [강민서](https://github.com/KwonSsohyun)    |               회원가입 / 로그인                  |  
-|  [김경민](https://github.com/KwonSsohyun)    |                  상품 패키지                     | 
-|  [박종휘](https://github.com/KwonSsohyun)    |                  상품 패키지                     |  
-|  [오송희](https://github.com/KwonSsohyun)    |                  상품 결제                      |   
-|  [홍은지](https://github.com/KwonSsohyun)    |              마이페이지 / 고객센터               |   
-|  [홍진한](https://github.com/KwonSsohyun)    |                  상품 결제                      | 
-<br>
+|                    이름                        |          포지션 및 담당 파트                         |                              
+| :--------------------------------------------: | :-------------------------------------------------:|
+|    [권소현](https://github.com/KwonSsohyun)     |      전체총괄 / 디자인총괄 / 회원가입 / 로그인        |
+|    [김예찬](https://github.com/KwonSsohyun)     |          전체총괄 / 마이페이지 / 고객센터            | 
+|    [강민서](https://github.com/KwonSsohyun)     |               회원가입 / 로그인                     |   
+|    [김경민](https://github.com/KwonSsohyun)     |                  상품 패키지                        | 
+|    [박종휘](https://github.com/KwonSsohyun)     |                  상품 패키지                        |  
+|    [오송희](https://github.com/KwonSsohyun)     |                  상품 결제                          |   
+|    [홍은지](https://github.com/KwonSsohyun)     |              마이페이지 / 고객센터                   |   
+|    [홍진한](https://github.com/KwonSsohyun)     |                  상품 결제                          | 
+<br>  
 
 ## ⚙️ 기술 스택
 <img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"> <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">  
