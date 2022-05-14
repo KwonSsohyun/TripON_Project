@@ -104,7 +104,6 @@
     <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0037.jpg" align="center"><br><br>
     <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0038.jpg" align="center"><br><br>
 </details>
-<br>
 
 
 <br><br>
@@ -118,8 +117,86 @@
 <br><br>
 
 ## 🗂 폴더 구조
-
-
+```
+tripON
+├── src
+│   └─main
+│        ├─java
+│        │  └─com
+│        │      ├─tripon
+│        │         ├──biz
+│        │         │  ├─activity
+│        │         │  │  └─impl
+│        │         │  ├─bcrypt
+│        │         │  ├─category
+│        │         │  │  └─impl
+│        │         │  ├─faq
+│        │         │  │  └─impl
+│        │         │  ├─index
+│        │         │  │  └─impl
+│        │         │  ├─notice
+│        │         │  │  └─impl
+│        │         │  ├─personalInformation
+│        │         │  │  └─impl
+│        │         │  ├─phone
+│        │         │  ├─purchase
+│        │         │  │  └─impl
+│        │         │  ├─purchaseManager
+│        │         │  │  └─impl
+│        │         │  ├─review
+│        │         │  │  └─impl
+│        │         │  ├─user
+│        │         │  │  └─impl
+│        │         │  └─util
+│        │         ├──view
+│        │             └─controller
+│        │             └─interceptor
+│        │
+│        ├─resources
+│        │  └─mappings
+│        │  └─applicationContext.xml
+│        │  └─db.properties
+│        │  └─tripon-map-config.xml
+│        │  └─log4j.xml
+│        │
+│        │
+│        └─webapp
+│            ├─resources
+│            │  ├─css
+│            │  ├─imgs
+│            │  └─js
+│            ├─WEB-INF
+│            │   ├─views
+│            │   │   ├─admin
+│            │   │   ├─error
+│            │   │   ├─template
+│            │   │   ├─faqPage.jsp
+│            │   |   ├─findID.jsp
+│            │   |   ├─findID2.jsp
+│            │   |   ├─findPW.jsp
+│            │   |   ├─findPW2.jsp
+│            │   |   ├─findPW3.jsp
+│            │   |   ├─findPW4.jsp
+│            │   |   ├─info_managementPage.jsp
+│            │   |   ├─login.jsp
+│            │   |   ├─naverLogin.jsp
+│            │   |   ├─noticePage.jsp
+│            │   |   ├─purchase.jsp
+│            │   |   ├─purchaseok.jsp
+│            │   |   ├─reservation_detailPage.jsp
+│            │   |   ├─reservationPage.jsp
+│            │   |   ├─sign.jsp
+│            │   |   ├─sign2.jsp
+│            │   |   ├─sign3.jsp
+│            │   |   ├─user_activityListPage.jsp
+│            │   |   ├─user_categoryPage.jsp
+│            │   |   ├─user_detailsPage.jsp
+│            │   |   └─user_searchResultPage.jsp
+│            │   |
+│            │   ├─appServlet.xml
+│            │   └─web.xml
+└──          └─index.jsp
+```
 
 <br><br>
 
