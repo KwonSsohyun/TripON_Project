@@ -23,7 +23,7 @@
 · 8명  
 <br>
 
-## 🛠 사용 기술   
+## ⚙️ 기술 스택
 <img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"> <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">  
 <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"> <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">  
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=aws&logoColor=white">
@@ -105,3 +105,22 @@
     <img src="https://raw.githubusercontent.com/KwonSsohyun/TripON_Project/main/%5B%ED%8A%B8%EB%A6%BD%EC%98%A8%5D%20%EC%86%8C%EC%8A%A4/%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C/04_%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%2C%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0/0038.jpg" align="center"><br><br>
 </details>
 <br>
+
+
+<br><br>
+
+## 🏗 아키텍쳐
+
+
+
+
+
+<br><br>
+
+## 🗂 폴더 구조
+
+
+
+<br><br>
+
+## 🏃🏻 기술적 도전
