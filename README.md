@@ -117,7 +117,10 @@
 
 <br><br>
 
-## 🗂 폴더 구조
+## 🗂 디렉토리 구조
+<details>
+    <summary>디렉토리 상세</summary>
+    <div markdown="1">
 ```
 tripON
 ├── src
@@ -206,7 +209,7 @@ tripON
 │            │   └─web.xml
 └──          └─index.jsp
 ```
-
+</details>
 <br><br>
 
 ## 🏃🏻 기술적 도전
