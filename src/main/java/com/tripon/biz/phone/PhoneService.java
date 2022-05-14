@@ -24,7 +24,7 @@ public class PhoneService {
 		HashMap<String, String> params = new HashMap<String, String>();
 		
 		params.put("to", userPhoneNumber);
-		params.put("from", "01071632261");
+		params.put("from", "01012345678");
 		
 		// 발신 전화번호. 테스트시에는 발신, 수신 둘다 본인 번호로 하면 됨
 		params.put("type", "SMS");
