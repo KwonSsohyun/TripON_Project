@@ -32,8 +32,8 @@
 |    [김경민](https://github.com/KwonSsohyun)     |                  상품 패키지                        | 
 |    [박종휘](https://github.com/KwonSsohyun)     |                  상품 패키지                        |  
 |    [오송희](https://github.com/KwonSsohyun)     |                  상품 결제                          |   
-|    [홍은지](https://github.com/KwonSsohyun)     |              마이페이지 / 고객센터                   |   
-|    [홍진한](https://github.com/KwonSsohyun)     |                  상품 결제                          | 
+|    [홍은지](https://github.com/Eunji9159)       |              마이페이지 / 고객센터                   |   
+|    [홍진한](https://github.com/gamzadongza)     |                  상품 결제                          | 
 <br>  
 
 ## ⚙️ 기술 스택
