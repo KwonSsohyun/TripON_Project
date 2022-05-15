@@ -139,31 +139,31 @@
     │        ├─java
     │        │  └─com
     │        │      ├─tripon
-    │        │         ├──biz
-    │        │         │  ├─activity
-    │        │         │  │  └─impl
-    │        │         │  ├─bcrypt
-    │        │         │  ├─category
-    │        │         │  │  └─impl
-    │        │         │  ├─faq
-    │        │         │  │  └─impl
-    │        │         │  ├─index
-    │        │         │  │  └─impl
-    │        │         │  ├─notice
-    │        │         │  │  └─impl
-    │        │         │  ├─personalInformation
-    │        │         │  │  └─impl
-    │        │         │  ├─phone
-    │        │         │  ├─purchase
-    │        │         │  │  └─impl
-    │        │         │  ├─purchaseManager
-    │        │         │  │  └─impl
-    │        │         │  ├─review
-    │        │         │  │  └─impl
-    │        │         │  ├─user
-    │        │         │  │  └─impl
-    │        │         │  └─util
-    │        │         ├──view
+    │        │      │   ├──biz
+    │        │      │   │  ├─activity
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─bcrypt
+    │        │      │   │  ├─category
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─faq
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─index
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─notice
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─personalInformation
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─phone
+    │        │      │   │  ├─purchase
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─purchaseManager
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─review
+    │        │      │   │  │  └─impl
+    │        │      │   │  ├─user
+    │        │      │   │  │  └─impl
+    │        │      │   │  └─util
+    │        │      └── └──view
     │        │             └─controller
     │        │             └─interceptor
     │        │
@@ -194,28 +194,28 @@
     │            │   │   │  └─manager_footer.jsp
     │            │   │   │  └─ ...
     │            │   │   ├─faqPage.jsp
-    │            │   |   ├─findID.jsp
-    │            │   |   ├─findID2.jsp
-    │            │   |   ├─findPW.jsp
-    │            │   |   ├─findPW2.jsp
-    │            │   |   ├─findPW3.jsp
-    │            │   |   ├─findPW4.jsp
-    │            │   |   ├─info_managementPage.jsp
-    │            │   |   ├─login.jsp
-    │            │   |   ├─naverLogin.jsp
-    │            │   |   ├─noticePage.jsp
-    │            │   |   ├─purchase.jsp
-    │            │   |   ├─purchaseok.jsp
-    │            │   |   ├─reservation_detailPage.jsp
-    │            │   |   ├─reservationPage.jsp
-    │            │   |   ├─sign.jsp
-    │            │   |   ├─sign2.jsp
-    │            │   |   ├─sign3.jsp
-    │            │   |   ├─user_activityListPage.jsp
-    │            │   |   ├─user_categoryPage.jsp
-    │            │   |   ├─user_detailsPage.jsp
-    │            │   |   └─user_searchResultPage.jsp
-    │            │   |
+    │            │   │   ├─findID.jsp
+    │            │   │   ├─findID2.jsp
+    │            │   │   ├─findPW.jsp
+    │            │   │   ├─findPW2.jsp
+    │            │   │   ├─findPW3.jsp
+    │            │   │   ├─findPW4.jsp
+    │            │   │   ├─info_managementPage.jsp
+    │            │   │   ├─login.jsp
+    │            │   │   ├─naverLogin.jsp
+    │            │   │   ├─noticePage.jsp
+    │            │   │   ├─purchase.jsp
+    │            │   │   ├─purchaseok.jsp
+    │            │   │   ├─reservation_detailPage.jsp
+    │            │   │   ├─reservationPage.jsp
+    │            │   │   ├─sign.jsp
+    │            │   │   ├─sign2.jsp
+    │            │   │   ├─sign3.jsp
+    │            │   │   ├─user_activityListPage.jsp
+    │            │   │   ├─user_categoryPage.jsp
+    │            │   │   ├─user_detailsPage.jsp
+    │            │   │   └─user_searchResultPage.jsp
+    │            │   │
     │            │   ├─appServlet.xml
     │            │   └─web.xml
     └──          └─index.jsp
