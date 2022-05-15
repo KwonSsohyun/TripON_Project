@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<context:component-scan base-package="com.tripon.view"></context:component-scan>
+	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<!-- Interceptor 인터셉터 객체 생성 -->
+	<bean id="authenticationInterceptor" class="com.tripon.view.interceptor.AuthenticationInterceptor"></bean>
+	
+	<!-- Interceptor 인터셉터 설정 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/logout"/>
+			<mvc:mapping path="/goInfo_managementPage"/>
+			<mvc:mapping path="/purchase"/>
+			<ref bean="authenticationInterceptor" />
+		</mvc:interceptor>
+		
+		<!-- 아래 내용은 로그아웃후 뒤로가기 버튼 눌렀을 때 다시 로그인 되는것을 방지하기 위함. -->
+		<bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+	        <property name="cacheSeconds" value="0" />
+	        <property name="useExpiresHeader" value="true" />
+	        <property name="useCacheControlHeader" value="true" />
+	        <property name="useCacheControlNoStore" value="true" />
+	        <property name="cacheMappings">
+                <props> <!-- 아래 경로에만 뒤로가기 제한시킴. -->
+                       <prop key="/login/**">86400</prop>
+                </props>
+   			</property>
+	    </bean>	
+	</mvc:interceptors>
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 파일업로드 설정 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="5000000" /><!-- 5MB -->
+	</bean>
+	
+	<!-- 예외 처리 설정 -->
+	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="defaultErrorView" value="error/error"></property>
+	</bean>
+	
+</beans>

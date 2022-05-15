@@ -1,0 +1,969 @@
+================== CATEGORY ==================
+SELECT * FROM CATEGORY;
+DELETE FROM CATEGORY;
+DROP TABLE CATEGORY;
+
+
+CREATE TABLE CATEGORY (
+CATEGORY_NAME VARCHAR(20) PRIMARY KEY,
+CATEGORY_IMGNAME VARCHAR(50)
+)DEFAULT CHARSET=UTF8;
+
+INSERT INTO CATEGORY (CATEGORY_NAME, CATEGORY_IMGNAME) VALUES ('서울', 'seoulsi.jpg');
+INSERT INTO CATEGORY (CATEGORY_NAME, CATEGORY_IMGNAME) VALUES ('경기', 'gyeonggido.jpg');
+INSERT INTO CATEGORY (CATEGORY_NAME, CATEGORY_IMGNAME) VALUES ('전주', 'jeonjusi.jpg');
+INSERT INTO CATEGORY (CATEGORY_NAME, CATEGORY_IMGNAME) VALUES ('부산', 'busansi.jpg');
+INSERT INTO CATEGORY (CATEGORY_NAME, CATEGORY_IMGNAME) VALUES ('제주', 'jejudo.jpg');
+
+================== ACTIVITY ==================
+SELECT * FROM ACTIVITY;
+DELETE FROM ACTIVITY;
+ALTER TABLE ACTIVITY AUTO_INCREMENT = 1;
+DROP TABLE ACTIVITY;
+
+
+CREATE TABLE ACTIVITY (
+ACT_NUM INT(6) AUTO_INCREMENT PRIMARY KEY,
+ACT_MAINTITLE VARCHAR(100) NOT NULL,
+ACT_SUBTITLE VARCHAR(100) NOT NULL,
+ACT_WRITER VARCHAR(20) NOT NULL,
+ACT_REGDATE DATE DEFAULT NOW(),
+CATEGORYCHECK VARCHAR(20),
+ACT_OPTNAME1 VARCHAR(60),
+ACT_OPTNAME2 VARCHAR(60),
+ACT_OPTNAME3 VARCHAR(60),
+ACT_OPTNAME4 VARCHAR(60),
+ACT_OPTPRICE1 INT(8),
+ACT_OPTPRICE2 INT(8),
+ACT_OPTPRICE3 INT(8),
+ACT_OPTPRICE4 INT(8),
+CATEGORY_NAME VARCHAR(50),
+ACT_CONTENT VARCHAR(6000),
+ACT_ANNOUNCEMENT VARCHAR(6000),
+ACT_ADDRESS VARCHAR(500),
+ACT_MAINPICTURENAME VARCHAR(100),
+ACT_THUMBIMGNAME VARCHAR(100),
+ACT_INFORIMGNAME VARCHAR(100),
+ACT_FAQ VARCHAR(6000)
+)DEFAULT CHARSET=UTF8;
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('롯데월드 종합이용권', '주중/주말/공휴일 사용가능', '관리자', '서울', '서울', '오전 1인 자유이용권', '오후 1인 자유이용권', '종일 1인 자유이용권', '종일 패밀리 자유이용권(어른1+어린이1)', 12000, 19500, 29500, 52500, 'LotteWorld_Thumbnail.jpg', 'LotteWorld_Picture.jpg', 'Seoul_LotteWorld.jpg', '서울특별시 송파구 올림픽로 240', '
+[유의사항]
+- 이용 시간은 현장 상황에 따라 상이할 수 있으며 방문 전 롯데월드 홈페이지에서 이용 시간 확인해주시기 바랍니다.
+- 기상 현상 등 현장 상황에 따라 일부 놀이기구 운영이 중단될 수 있는 점 참고 바랍니다.
+- 본 상품은 입장권이 포함되어 있습니다.
+- 본 상품은 내국인에 한하여 이용 가능하며 외국인 여행객은 이용이 불가합니다.
+(외국인 거주자의 경우 외국인 등록증, 외국인 학생증 등 관련 증명서를 제시 후 이용해 주시기 바랍니다.)
+- 36개월 미만 유아는 나이를 확인할 수 있는 증빙 서류를 지참해주시면 무료입장이 가능합니다.
+(단, 무료입장에 대한 혜택이며 놀이시설 이용 시 별도의 요금이 부과됩니다.)
+- 퇴장 후 재입장 불가합니다.
+- QR코드 이용전 핸드폰 색상반전 설정 해제 부탁 드립니다.
+(색상반전 설정 시 QR코드 인식 불가 합니다.)
+
+- 사용/티켓 교환 후 취소는 절대 불가합니다.
+- 유효기간 내 취소 시 전액 환불 가능하며, 취소 시 구매 사이트로 접수 부탁드립니다.
+- 본 티켓은 부분 취소, 부분 환불이 절대 불가합니다.(유효기간내 모두 사용 권장)
+- 취소 승인까지는 평일 기준 최대 일주일정도 소요될 수 있는 점 양해 부탁드립니다.
+
+※ 중고 사이트에서 재판매 또는 구매 시 발생한 불이익에 대해서는 해당 시설 및 판매사에서 책임지지 않습니다
+동일번호로 대량 구매 등과 같이 이상 구매 사례 확인 시, 자동 취소 될 수 있는 점 안내드립니다.', '
+Q. 어드벤처를 나갔다가 다시 들어올 수 있나요?
+A. 롯데월드 어드벤처에서는 파크 입장 후 퇴장하시면 원칙적으로 재입장이 불가능합니다.
+
+  단, 재입장을 도와드리는 몇가지 사항에 대해 안내해 드립니다.
+  ① 아이스링크 이용 손님
+  ② 저자거리 또는 민속박물관 이용 손님(어드벤처 3F 민속관게이트 이용)
+  ③ 의무실 방문 후 간호사 진단에 따라 외부 의료기관 방문하는 경우
+  ④ 파크 입장 후 매직패스 프리미엄 티켓 구매를 희망하시는 경우
+
+
+Q. 티켓의 QR코드를 캡쳐해서 이용 가능한가요?
+A. 캡쳐 된 티켓의 QR코드는 입장 및 매직패스 사용이 어렵습니다.
+
+다른 분께 티켓을 보내실 경우 마이티켓에서 보내고자 하는 티켓의 "선물하기" 버튼을 활용해 티켓을 전송해주시기 바랍니다.
+
+
+Q. 공연에 대해 궁금한 것은 어디에 물어봐야 하나요?
+A. 공연 및 공연참여와 관련된 질문은 공연참여사무실로 연락주시면 안내 및 상담이 가능합니다.
+   ※ 공연참여사무실 : 02-411-4339(운영시간 12:00~20:00)
+   현재 롯데월드에서 진행중인 공연 정보가 궁금하시다면,
+   홈페이지 즐길거리-공연-금주의공연 메뉴를 통해서 자세한 공연의 정보와 공연 스케줄을 확인하실 수 있습니다.
+
+
+Q. 어린이, 청소년이 어른티켓으로 이용할 수 있나요?
+A. 어린이(36개월이상~만 12세), 청소년(만 13세~만 18세) 손님은 어른(만 19세 이상)티켓 사용이 가능합니다.
+
+   참고로, 만 36개월 미만인 유아손님의 경우 무료입장이 가능하니 참고부탁드립니다.
+   ※ 단, 유아용 어트랙션 탑승 시 베이비 티켓 구매 필요(0~12개월 미만의 경우 어트랙션 무료이용 가능)
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('남산타워 전망대', '당일사용가능', '관리자', '서울', '서울', '12세미만 아동', '청소년', '성인', '성인(1+1)', 4000, 8000, 12000, 20000, 'NamsanTower_Thumbnail.jpg', 'NamsanTower_Picture.jpg', 'Seoul_NamsanTower.jpg', '서울특별시 용산구 남산공원길 105(용산동2가)', '
+[이용안내]
+1. N서울타워 연간멤버쉽 구매 
+    * 최소 이용 1시간 전 구매
+    * (당일구매/당일사용 가능)
+2. 구매 완료 문자 메세지 수신
+    * (2,3인권 구매시 모바일 멤버쉽 1매로 발송)
+3. 사용자 정보 등록
+   * 그룹 대표자 1명만 등록.
+   * ※커플,가족 등록 시 커플,가족 사진으로 등록 필수.
+   * 인원수대로 얼굴 미확인 시 반려.
+4. n서울타워 즐기기
+   * 안내데스크 방문하여 "모바일 N서울타워 연간멤버쉽" 제시
+
+[유의사항]
+유효기간 : 2023년 5월 31일까지.
+*정보등록기간 : 구매일로부터 한달 / 정보등록기간 이후 미등록 환불 불가합니다. 
+해당 연간멤버쉽은 구매 즉시 사용처리됩니다.
+사용자 정보 등록 후 환불 불가합니다. 
+사용자 정보 미등록의 경우 100% 환불 가능합니다. (등록기간 내)
+인원에 대한 부분환불은 불가하며, 포함된 상품 또한 부분환불 불가합니다.
+N서울타워 연간멤버쉽은 온라인 발급이며, 포함된 상품들은 N서울타워 안내데스크에서 실물(지류)티켓으로 교환 후 사용 가능합니다.
+실사용자와 구매자가 상이한경우 구매자 정보(휴대폰번호) 확인 후 실물(지류)티켓으로 교환 가능합니다.
+케이블카 왕복승차권 또한 N서울타워 안내데스크에서 교환 가능합니다.
+포함된 상품들은 실물(지류)티켓으로 교환 후 분실 시 재발행 불가합니다.
+현장/외부 할인 및 혜택은 변경될 수 있으며 이에 따른 환불은 불가합니다.
+등록자 외 타인이 부정사용할 경우 별도 안내 없이 연간이용권은 폐기되오니 유의 바랍니다.
+정확한 정보와 사진 등록을 해야만 이용 가능합니다.
+등록된 본인, 커플, 가족만 사용가능합니다.
+본 상품은 특별 상품으로 양도 및 양수 불가합니다.
+입장 우선권은 없으며 최대인원 초과 시 대기시간 및 입장제한이 발생 할 수 있습니다.', '
+Q. 하늘우체국 이용방법은 어떻게 되나요?
+A. 전망대 타워기프트에서 엽서와 우표를 판매하고 있습니다.
+   국내의 경우 2~3일, 국외의 경우 15일 정도 소요됩니다.
+
+
+Q. N서울타워 내에서 촬영을 하고 싶습니다.
+   촬영을 원하실 경우 최소 3일전 [주말, 공휴일 제외] 협조공문을 통해 촬영허가를 받으셔야 합니다.
+
+
+Q. 도시락을 가지고 왔을 경우 식사 가능한 장소는?
+A. N서울타워 내부에서는 음식물을 드실 수 없으니 팔각정 앞 광장을 이용해주시길 바랍니다.
+
+
+Q. 애완견을 데리고 왔을 경우?
+A. 애완견 보호 공간이 따로 마련되어 있지 않으므로 애완견을 동반하여 입장하실 수 없습니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('서울 스카이 롯데타워', '롯데월드타워 당일사용가능', '관리자', '서울', '서울', '대인 1인권', '소인 1인권', '오후 1인권', '야간 1인권', 23000, 20500, 18500, 19500, 'Sky_Thumbnail.jpg', 'Sky_Picture.jpg', 'Seoul_Sky.jpg', '서울특별시 송파구 올림픽로 300 롯데월드 타워', '
+[서울스카이 이용안내]
+※ 서울스카이 입장시 <나는 고래> 미디어 아트 특별전 함께 관람 가능합니다.
+운영시간
+└ 정확한 운영시간은 홈페이지 참고 부탁드립니다.
+서울스카이 홈페이지 : https://seoulsky.lotteworld.com/ko/main/index.do
+* 마감시간 1시간 전까지 발권 및 입장 가능합니다.
+- 36개월 미만의 유아는 증빙서류 지참 시 무료입장 가능(성인1명당 1유아)
+국가유공자증/ 장애인증 제시 시: 30% 할인
+※ 상기 할인 사항은 증빙 서류 지참하여 현장 발권 시에만 적용 가능합니다.
+
+[유의사항]
+- 본 티켓으로는 서울스카이 모바일 앱 및 온라인 홈페이지에서 사전예약이 불가능하며, 현장에서만 이용가능 합니다.
+- 재판매로 인한 모든 법적인 문제는 해당 시설 및 판매사에서 책임지지 않습니다.
+- 입장 마감시간을 꼭 확인해 주시기 바랍니다.
+
+[주차정보]
+-당일 방문 고객 주차 할인권 지급: 최대 4시간 4,800원(1,200원/60분 기준)
+4시간 이후 정상 주차요금 적용
+정상 주차요금(10시~20시: 10분당 500원, 그외 시간 10분당 200원)', '
+Q. 공항으로 가기 전에 전망대를 이용할 건데, 짐을 보관하는 곳이 있나요?
+A. 입장 시 적정 규격 크기 이상의 개인 짐은 소지를 제한하고 있습니다.
+   전망대 매표소 우측에 물품보관소가 준비되어 있으니 이용해 주시기 바랍니다.
+
+
+Q. 사전에 단체 티켓을 구입하고 싶습니다.
+A. 단체 요금은 15인 이상부터 적용되나, 자세한 내용은 단체 매표소로 문의하시면 됩니다.
+
+
+Q. 전망대를 관람한 뒤 근처에 추가로 즐길만한 요소가 있나요?
+A. 롯데월드타워에는 6성급 호텔, 글로벌 비즈니스의 중심 프라임 오피스와 면세점 등이 갖추어져 원스톱 라이프스타일이 가능합니다.
+
+   롯데월드몰은 스타일리쉬한 쇼핑은 물론 문화, 엔터테인먼트와 체험을 즐길 수 있는 곳으로 전 세계 바다를 그대로 옮겨놓은 듯한 아쿠아리움도 있습니다.
+   그 밖에도 국내 최대 럭셔리&글로벌 컨템포러리 패션전문관을 지향하는 에비뉴엘 백화점은 물론 국내 최대 전자제품점 하이마트, 생필품을 구매할 수 있는 롯데마트도 있습니다.
+   롯데월드 어드벤처는 5분 거리에 위치하고 있어 더욱 더 신나는 경험을 하실 수 있습니다.
+
+
+Q. 날씨가 좋지 않아 날짜를 변경하고 싶습니다.
+A. 온라인 예매 또는 현장 발권 후 일시를 바꾸기 위해서는 취소/환불과 동일한 규정이 적용되어 일정의 수수료가 발생합니다.
+   그러므로 최초 예매 시 신중히 일시를 선택하시기 바랍니다.
+   서울스카이 전망대는 맑은날, 흐린날, 비오는날 등 날씨와 상관없이 전망대의 모든 컨텐츠를 동일하게 즐길 수 있습니다.
+   (일부 시설의 경우 운영상의 이유로 사전공지 없이 이용이 제한될 수 있습니다.)
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('에버랜드 종일이용권', '날짜지정자유/당일사용가능', '관리자', '경기', '경기', 'A(평일)오후 자유이용권', 'D(주말)오후 자유이용권', 'A(평일)종일이용권', 'D(주말)종일이용권', 24000, 32000, 36000, 42000, 'Everland_Thumbnail.jpg', 'Everland_Picture.jpg', 'Gyeonggi_Everland.jpg', '경기도 용인시 처인구 포곡읍 전대리 310 (에버랜드로 199)', '
+[유의사항]
+방문일지정 예약상품으로 지정한 날짜에 이용 가능합니다.
+대/소 공통 이용 가능하며 36개월부터 요금 적용됩니다.
+당일 에버랜드 입장 및 가동중인 시설 이용 가능합니다.
+(단, 코인물/대여물/스페셜투어/기획전 등 별도 요금)
+일부 어트랙션/동물원/식당 이용시간은 에버랜드 마감시간과 다르게 조기
+종료될수 있으니 사전에 에버랜드 모바일 앱에서 운영시간 확인 바랍니다.
+정문주차장은 유료, 외곽주차장은 무료로 운영됩니다.
+QR코드의 사진을 판매사이트에 그대로 올리는 경우 제3자의 무단 도용에
+따른 피해가 발생할 수 있습니다.
+▷에버랜드 http://www.everland.com
+※ 스프링 온 스푼 : https://www.everland.com/web/everland/now/news/1223017_10436.html', '
+Q. 어트랙션 대기중이 무슨 뜻인가요?
+A. 당일 기상이나 운영 여건에 따라 어트랙션 등의 오픈이 지연되고 있음을 의미합니다.
+   실외 어트랙션은 영하권의 날씨로 인하여 시설 자체의 결빙이 생기거나
+   비/눈/우박 등의 기상악화의 경우에도 오픈이 지연되거나 당일 이용이 어려운 사항이 발생될 수 있으니
+   이용에 참고하여 주시기 바랍니다.
+
+
+Q. 에버랜드 내에 의무실이 있나요?
+A. 스카이크루즈(상단) 맞은편 건물 내의 정문의무실과
+   T 익스프레스 앞 알파인의무실이 있으며, 간단한 상비약이 구비되어 있습니다.
+
+
+Q. 에버랜드 내 이동 수단을 알려주세요.
+A. 에버랜드 안에서 이동 가능한 이동수단은 아래의 4가지 방법이 있습니다.
+   리프트와 곤돌라는 편도 이용 가능하며 왕복 이용을 원하실 경우,
+   도착지점 하차 후 입구로 재입장하시어 대기라인에 다시 줄을 서서 이용 가능합니다.
+   1. 도보이용
+   2. 무빙웨이(주토피아 이벤트홀 옆에 위치)
+   3. 리프트: 휴먼스카이(글로벌페어 ↔ 주토피아)
+   스카이웨이(아메리칸어드벤처 ↔ 유러피안어드벤쳐)
+   4. 곤돌라: 스카이 크루즈 (글로벌페어 키즈커버리 앞 ↔ 매직랜드 범퍼카 앞)
+   ※ 각 이동 편의 수단의 운영 여부 및 시간은 에버랜드 앱을 참고해주세요.
+
+
+Q. 다른 사람 아이디로 출력한 쿠폰을 사용해도 되나요?
+A. 쿠폰에 출력된 홈페이지 가입명의와 사용하는 손님이 동일인이 아니어도 가능합니다.
+   쿠폰을 적용받으시는 분께서 해당 쿠폰과 쿠폰에 따른 지참물 함께 제시하시면 할인혜택을 받으실 수 있습니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('용인 한국민속촌 자유이용권', '당일사용가능', '관리자', '경기', '경기', '한국민속촌 1인 자유이용권', '한국민속촌 2인 자유이용권', '한국민속촌 4인 자유이용권', '한국민속촌 5인 자유이용권', 20900, 40000, 79500, 99500, 'KoreanFolkVillage_Thumbnail.jpg', 'KoreanFolkVillage_Picture.jpg', 'Gyeonggi_KoreanFolkVillage.jpg', '경기도 용인시 기흥구 민속촌로 90 한국민속촌', '
+[이용안내]
+36개월 미만 유아는 증빙서류 필수 지참 후 무료입장 가능
+놀이시설은 개장시간 30분 후부터 이용 가능합니다.
+놀이시설은 신장 기준에 따라 사용이 제한될 수 있습니다.
+자전거(어린이용 세발자전거 포함), 퀵보드, 인라인스케이트, 공 등 놀이용품은 다른 방문객분들의 안전을 위해 제한됩니다.
+애완동물 출입은 제한됩니다. (안내견 제외)
+
+
+[유의사항]
+박물관 및 미술관은 내부사정에 따라 휴관될 수 있으며 이 경우 부분환불은 불가하니 필히 홈페이지에서 운영시간 확인 후 방문 해주시기 바랍니다.
+정기공연 및 행사는 현장 상황에 따라 유동적으로 운영되오니 참고해주시기 바랍니다.
+퇴장 후 재입장 불가합니다.
+티켓 발권 후 분실 시 재발급 불가합니다.', '
+Q. 유효기간이 만료된 티켓은 사용이 불가한가요?
+A. 사용 유효기간이 기재되어 있는 지류티켓의 경우, 기간이 만료되면 이용이 불가합니다.
+
+
+Q. 문화누리카드 및 상품권 사용이 가능한가요?
+A. 문화누리카드의 경우 정문 매표소에서 결제가 가능합니다. (문화누리카드 전용 별도 할인 미적용)
+국민관광상품권의 경우 정문 매표소에서 사용 가능하시며,
+기타 상품권 사용은 구매처 사용가능처를 참고해 주시기 바랍니다.
+
+
+Q. 무료입장이 가능한 경우는 언제인가요?
+A. 전상군경, 공상군경, 상이군경, 4.19혁명 부상자, 6.18 자유상이자, 6.25 참전재일학도의용군인의 경우 무료입장 대상이시며 입장 시에는 반드시 증빙서류를 지참하셔야 합니다.
+(※이 외 국가유공자 및 장애인은 본인에 한하여 아동요금으로 적용됩니다.)
+36개월 미만 유아의 경우 무료입장이며, 유아전용시설 이용시에는 입장 후 유아이용권을 별도로 구매하셔야합니다.
+
+
+Q. 민속촌 내부에서 한복대여를 할 수 있나요?
+A. 네, 가능합니다. (문의처: 031-288-2987)
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('과천 서울대공원 리프트+동물원 패키지', '평일/주말/공휴일/당일사용가능', '관리자', '경기', '경기', '리프트 2회권+동물원 입장권 어른', '리프트 2회권+동물원 입장권 청소년', '리프트 2회권+동물원 입장권 어린이', '리프트 2회권+동물원 입장권 유아', 15000, 9000, 8000, 6000, 'SeoulGrandPark_Thumbnail.jpg', 'SeoulGrandPark_Picture.jpg', 'Gyeonggi_SeoulGrandPark.jpg', '경기도 과천시 막계동 산 121-2 서울대공원(內) 스카이리프트', '
+1) 상품 구매
+2) 모바일티켓 수신
+3) 티켓보관함 접속 및 확인
+4) 리프트 매표소에서 모바일티켓 제시 후 이용권 수령하여 이용
+※ 모든 이용권 수령은 스카이리프트 본관 앞 매표소에서 가능하며 그외 탑승장에서는 티켓 수령 불가합니다.
+※ 스카이리프트 매표소 위치안내(이용권 교환처) : 대공원 정문 종합안내소 앞 잔디광장에서 우측 200m 지점 위치
+※ 리프트 탑승권은 본인에 한하여 횟수만큼 이용가능하며 타인과 분할사용 불가합니다.
+
+1. 스카이리프트 구매기준
+대인 : 만 19세이상
+청소년 : 만 13세 ~ 만 18세
+어린이 : 만 6세 ~ 만 12세
+유아 : 만 36개월 ~ 만 5세
+※ 36개월 미만의 유아의 경우 증빙서류(의료보험증/주민등록등본) 지참시 리프트 무료이용 및 동물원 무료입장 가능
+※ 기타 경로(만 65세)/국가유공자/장애인 등 동물원 입장료 면제 대상자는 리프트 및 코끼리열차 요금만 적용
+
+2. 스카이리프트 구간별 안내
+[1호선 (동물원 외부)]
+운행구간 : 스카이리프트 메인 탑승장 ↔ 동물원 입구(북문) 앞, 테마가든(장미원), 현대미술관(자연캠프장)입구, 서울랜드정문 방면
+운행거리 및 소요시간 : 733m(편도) / 약 10분(편도)
+
+[2호선 (동물원 내부)]
+운행구간 : 동물원 입구(북문) 안쪽 ↔ 동물원의 끝 지점(호랑이, 해양관, 곰, 뱀, 늑대 등)
+운행거리 및 소요시간 : 977m(편도) / 약 15분(편도)
+
+[운영 시간]
+03월, 11월 : 1호선 09:30~18:00 / 2호선 09:30~17:30
+04월~10월 : 1호선 09:30~19:00 / 2호선 09:30~18:00
+12월~02월 : 1호선 10:00~17:30 / 2호선 10:00~16:30
+※ 당일 기상상황(강풍, 낙뢰 등)과 시설 점검에 따라 운영시간 변경 및 운영중단 될 수 있습니다.
+
+3. 스카이리프트 이용안내 및 유의사항
+[이용안내]
+리프트는 동물원 외부(1호선 2개구간)와 동물원 내부(2호선 2개구간)을 운영하고 있습니다.
+2회권은 편도기준으로 2개구간, 3회권은 편도기준으로 3개구간을 이용할 수 있으며 당일에 한하여 이용할 수 있습니다.
+
+[탑승시 유의사항]
+초등학교 3학년 미만의 어린이와 거동이 불편하신 분, 그 외 보호자가 필요하신 분들은 최소 2명당 1명의 보호자가 동반해야 탑승가능
+※ 탑승 가능 여부는 현장 안전관리자 판단에 따라 제한될 수 있습니다.', '
+Q. 테마가든은 어디에 있나요?
+A. 동물원 정문에서 길 건너편에 보시면 테마가든 이라고 따로 있습니다.
+
+
+Q. 스카이리프트를 타다가 물건이 떨어졌는데 찾을 수 있나요?
+A. 그물에 걸려있을 경우 스카이리프트 사무실(☎02-504-5657)로 문의하시면 됩니다.
+
+
+Q. 코끼리열차 이용요금은 어떻게 되나요?
+A. 성인 1500원 청소년 1,000원 어린이 1,000원입니다.
+
+
+Q. 코끼리열차 이용권 구매 시 편도권만 살 수 있나요? 왕복권은 없나요?
+A. 코끼리열차는 기본 편도권을 판매하고 있으며, 한번 하차 하시면 다시 편도권을 구매 하셔야 합니다.
+   왕복권은 종합안내소에서만 판매하고 있습니다. (단, 왕복권 구입 후 환불이 불가합니다.)
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('전주 한옥마을 왕발통', '전동바이크&다인승관람차', '관리자', '전주', '전주', '왕발통 1시간 이용권', '왕발통 종일 이용권', '2인승 전동바이크 1시간 이용권', '3~4인승 한옥마을 관광차', 12000, 50000, 18000, 27000, 'ElectricBike_Thumbnail.jpg', 'ElectricBike_Picture.jpg', 'Jeonju_ElectricBike.jpg', '전라북도 전주시 완산구 태조로 25-9', '
+[이용방법 안내]
+1. 원하는 상품 구매 (당일구매/당일사용가능)
+2. 구매 1시간 후 현장으로 유선 및 홈페이지 예약 필수
+*유선예약 :  010-4603-5078
+*예약과 동시에 사용처리됩니다.
+3. 현장방문, 고객 성함 및 휴대폰 번호 확인 후 이용
+(상품주문시 기재하신 상품수령인or받으시는분or수취인명으로 조회가능합니다)
+
+[업체정보]
+업체명 : [전주] 한옥마을 왕발통
+업체주소 : 전라북도 전주시 완산구 태조로 25-9
+업체번호 : 010-4603-5078
+운영시간 : 주중 11:00~19:00 주말 10:30~19:30
+휴    무 : 휴무없음
+최소이용가능나이 : 키 150이상시 일부상품 자격증필요
+주차여부 : 전주 한옥마을 주차장 요금규정에 따름
+
+[이용안내]
+* 티켓구매후 최소 1일 전 010-4603-5078로 예약후 사용가능
+1. 눈/비 올 시 이용이 불가하여, 이 경우 체험비용은 환불해드립니다.
+2. 미성년자 이용시 보호자 동행 후 이용 가능합니다. (미성년자 단독대여/탑승 불가)
+3. 1인승 왕발통 이용시 원동기, 1종, 2종 운전면허 필수입니다.
+4. 2인승 전동바이크는 미성년자 운전 불가합니다.
+5. 오시는길 : 에루아떡갈비와 츄즈미 사이 골목이며, 위치를 못찾으실 경우 전화주시면 직원이 안내해드립니다.
+6. 탑승 전 안전교육 및 조작방법 교육을 진행합니다.
+7. 주말(토,일)의 경우 여유로운 이용을 위해 14:00이전까지 방문하여 대여바랍니다.
+8. 다인승 바이크는 한 대 당 대여가격으로, 티켓 한 장으로 정원에 맞추어 이용 가능합니다.
+9. 일부 옵션의 경우 당일구매/당일사용 불가하오니, 구매전 유의해주시기 바랍니다.', '
+Q. 바이크를 이용하려면 면허가 있어야 하나요?
+A. 바이크를 이용하려면 원동기, 1종, 2종 운전면허 필수입니다.
+
+
+Q. 미성년자는 이용을 할 수 없나요?
+A. 미성년자 이용시 보호자 동행 후 이용 가능합니다. (미성년자 단독대여/탑승 불가)
+
+
+Q. 티켓을 취소하려고 하는데 환불이 되나요?
+A. 유효기간 내 미사용티켓은 100% 환불이 가능합니다.
+
+
+Q. 바이크 운영시간이 어떻게 되나요?
+A. 주중 11:00~19:00 주말 10:30~19:30 휴 무 : 연중무휴 입니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('전주 색동저고리 하루종일 이용권', '한복, 교복, 개화기 의상대여', '관리자', '전주', '전주', 'A.경성의복 하루종일 이용권', 'B.종일이용권+DSLR촬영', 'C.종일이용권+DSLR촬영+포토샵+인화4장', 'D.종일이용권+DSLR촬영+포토샵+인화8장', 13900, 18000, 22000, 28000, 'GyeongseongClothes_Thumbnail.jpg', 'GyeongseongClothes_Picture.jpg', 'Jeonju_GyeongseongClothes.jpg', '전북 전주시 완산구 은행로 24, 2층', '
+[티켓사용정보]
+유효기간 : 구매일로부터 60일
+
+[예약정보]
+구매후 바로 사용가능
+
+[티켓안내]
+티켓 결제 시 제시
+
+전화번호 : 010-4628-2844
+주소 : 전북 전주시 완산구 은행로 24, 2층
+영업시간 : 평일 10:00~19:00 / 주말 10:00~20:00
+휴무일 : 연중무휴
+주차정보 : 공영주차장 유료주차가능
+
+[판매정보]
+구매가능수량 : 1인당 100매까지 구매 가능 (선물하기 포함)
+가격은 시장상황에 따라 변동 될 수 있습니다.
+
+[환불규정]
+유효기간 종료일까지 환불 가능 상품', '
+Q. 의복대여 후 스타일링은 추가요금이 있나요?
+A. 색동저고리 매장내 모든의상 적용 - 한복, 경성의복, 교복 모두 풀 악세사리(머리장식,손질,가방,신발,모자,부채등) 추가요금 없습니다.
+
+
+Q. 사진촬영 후 사진은 어떻게 받나요?
+A. 사진촬영만 하실 경우 사진은 카카오톡이나 이메일로 보내드립니다.
+
+
+Q. 매장 위치가 바꼈나요?
+A. 기존 전동성당 맞은편에서 한옥마을 공영주차장 인근, 풍년제과 사거리 맞은편 로봇전망대 2층으로 이전하게 되었습니다.
+
+
+Q. 택배 배송으로도 대여가 가능한가요?
+A. 네 가능합니다. 상품 구매후 연락처와 이름을 남겨주시면 확인 후 안내드립니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('전주 한옥마을 한복남', '한옥마을점 프리미엄 한복대여', '관리자', '전주', '전주', 'A.프리미엄 한복대여 1인 이용권', 'B.프리미엄 한복대여 2인 이용권', 'C.프리미엄 한복대여 3인 이용권', 'D.프리미엄 한복대여 4인 이용권', 50000, 95000, 140000, 180000, 'HanbokRental_Thumbnail.jpg', 'HanbokRental_Picture.jpg', 'Jeonju_HanbokRental.jpg', '전라북도 전주시 완산구 은행로 54-1(전주한옥마을점)', '
+[이용안내]
+1. 해당옵션 구매
+2. 이용당일 지정업체 방문
+* 이용일 1시간 전 구매 필수 (SMS는 별도로 전송되지 않습니다.)
+3. 성함과 휴대폰 뒷자리 4자리로 이용가능(현장매표소에서 구매자확인 후 이용)
+
+[유의사항]
+1. 한복 대여 절차 : 접수 - 물품보관 - 한복고르기 - 한복착용(탈의실 이용) - 액세서리 착용(선택사항) - 자유롭게 여행 - 반납
+2. 한복대여시간에 고르는 시간도 포함되나요? : 접수후, 한복을 고르는 시간을 30분 드립니다. 30분이 초과되면 대여시간에서 차감됩니다.
+3. 전통한복과 테마한복의 차이는 무엇인가요?
+전통한복은 수수하고 단아한 디자인입니다. 일반적으로 보실수 있는 한복입니다.
+테마한복은 색감과 무늬가 화려합니다. 또한, 왕, 어우동, 사또, 선비 등 개성있는 한복도 포함되어 있습니다.
+4. 반납시간 초과시
+- 10분당 1,000원 추가요금 발생', '
+Q. 매장 위치가 어디에 있나요?
+A. 전주한옥마을 물레방아 사거리에서 츄남커피숍 바로 옆 건물 1층에 매장이 위치해있습니다.
+
+
+Q. 한복 구매도 가능한가요?
+A. 악세사리와 함께 다양한 프리미엄 한복을 구매하실 수 있습니다.
+
+
+Q. 헤어스타일링도 해주시나요?
+A. 추가적으로 고급 헤어스타일링을 서비스해드리고 있습니다.
+
+
+Q. 지점별 매장이 있나요?
+A. 한복남 경복궁점, 창경궁&창덕궁지점, 부산타워점이 있습니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('부산 시티투어버스 24시간 이용권', '전 노선 자유롭게 이용가능', '관리자', '부산', '부산', '성인 24시간권', '아동 24시간권', '성인1+1 24시간권', '성인+아동 24시간권', 12900, 7000, 23500, 16000, 'CityTourBus_Thumbnail.jpg', 'CityTourBus_Picture.jpg', 'Busan_CityTourBus.jpg', '부산역 2층 부산시티투어버스 안내센터(2층 KTX 타는 곳 1번 맞은편)', '
+[티켓사용정보]
+당일구매 당일사용 가능(*매표소 운영시간 내 구매건에 한함)
+ㆍ매표소 : 부산역 2층 부산시티투어버스 안내센터
+ㆍ수령시간 09:00~16:00(*매주 월-화요일 휴무)
+ㆍ매표소 외 다른 장소 및 수령시간 외 수령 절대 불가
+ㆍ매주 월-화요일 부산시티투어버스 정기 휴무 
+ㆍ탑승지/정류장: 부산역 라마다앙코르호텔 맞은편 시티투어버스 정류장(*KTX 부산역 1번 출구 바로 앞)
+
+ㆍ탑승권 수령한 일자에 반드시 첫 탑승을 해야합니다.
+ㆍ탑승권 수령 시, 발권일 및 날짜직인이 찍힌 탑승권이 발부되기때문에 수령하신 당일에 꼭 첫 탑승을 하셔야합니다.
+ㆍ최초 탑승 시부터 24시간동안 자유롭게 이용 및 환승 가능합니다.
+
+부산시티투어버스(매표소)
+주소 : 부산역 2층 부산시티투어버스 안내센터(2층 KTX 타는 곳 1번 맞은편)
+
+부산시티투어버스(정류장)
+대표 : 051-464-9898(*부산관광공사)
+주소 : 부산역 라마다앙코르호텔 맞은편 시티투어버스 정류장(KTX 부산역 1번 출구 바로 앞)', '
+Q. 탑승권 수령은 부산역에서만 가능한가요?
+A. 탑승권 수령은 부산역 2층 부산시티투어버스 안내센터에서만 가능하며, 수~일요일 09:00 ~ 16:00에만 수령할 수 있습니다.
+
+
+Q. 탑승권 수령없이 정류장에서 바로 탑승도 가능한가요?
+A. 탑승권 없이는 버스 탑승이 불가합니다.
+
+
+Q. 24시간권이면 1박 2일 이용도 가능한가요?
+A. 가능합니다. 탑승권 수령 후 최초 탑승 시부터 24시간 동안 자유 이용이 가능한 티켓으로 24시간 동안은 환승도 자유입니다.
+
+
+Q. 탑승권을 수령한 경우, 부산역 말고 다른 곳에서 탈 수 있나요?
+A. 가능합니다. 부산시티투어버스가 정차하는 모든 정류소에서 자유롭게 탑승 및 환승을 할 수 있습니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('부산 해운대 블루라인파크', '해변열차 온라인 예매권', '관리자', '부산', '부산', '1회 예매권(편도)', '2회 예매권(왕복)', '자유이용 예매권', '자유이용 예매권2인', 6600, 9500, 12300, 23000, 'SeasideTrain_Thumbnail.jpg', 'SeasideTrain_Picture.jpg', 'Busan_SeasideTrain.jpg', '<해변열차 출발 탑승장>
+
+미포 정거장 : 부산 해운대구 중동 948-1
+
+청사포 정거장 : 부산 해운대구 청사포로 116
+
+송정 정거장 : 부산 해운대구 송정동 299-20', '
+★★확인 필수★★　[예약방법] 　미예약 시 현장 이용 불가
+
+1. 이용인원에 맞는 옵션 선택 후 예매권 구매
+2. ★필수★ 문자 예약링크에서 이용일/회차 등록 (구매 정보 입력)
+3. 카카오톡 [QR모바일티켓] 발행(사용완료)→현장 이용
+(예약 수량) 열차-인당 1매
+
+[예약 시 유의사항]
+해변열차는 운행 종료시간을 고려하여 예약해주시기 바랍니다.
+- 해변열차 2회권 : 종료 2시간 전 예약 마감
+- 해변열차 자유이용권 : 종료 3시간 전 예약 마감(패키지 권종 포함)
+
+
+*해운대블루라인파크 주차장 안내
+해운대블루라인파크 일대는 차량이 많아 혼잡하니 가급적 대중교통을 이용해주시기 바랍니다.
+- 미포(2시간 무료) : 해운대구 중동 947-1 (타워식기계주차장, 대형 SUV 불가)
+- 청사포 : 지원 없음 (청사포공영주차장 우회/ 10분당 300원, 1일 8,000원)
+- 송정(2시간 무료) : 해운대구 송정동 427-2
+
+
+* 해운대블루라인파크 시설 주소 안내
+<해변열차 출발 탑승장>
+미포 정거장 : 부산 해운대구 중동 948-1
+청사포 정거장 : 부산 해운대구 청사포로 116
+송정 정거장 : 부산 해운대구 송정동 299-20
+★이용일 예약 시, ‘최초 출발 정거장’ 만 선택하시면 됩니다.
+★운행 종료 시간대에 따라 권종별 예약 마감시간이 상이하니 참고 부탁드립니다.
+해변열차 2회권 : 운행 종료 2시간 전 예약 마감
+해변열차 자유이용권 : 운행 종료 3시간 전 예약 마감
+
+
+* 해운대블루라인파크 이용 시 유의사항
+시설 내 음식물 섭취 불가, 반려동물은 캐리어 이용 시에만 탑승 가능합니다. (캐리어 대여 불가)
+탑승권 분실 시 재발급은 불가합니다.
+36개월 미만은 증빙서류(주민등록등본, 의료보험증) 지참 시 무료 탑승 가능합니다.
+우천 시에도 정상 운행 합니다.', '
+Q. 해운대블루라인파크 내 물품 보관함이 있나요?
+A. 그렇습니다. 미포 정거장에 물품 보관함이 있습니다. (중대형 : 10칸 / 중형 18칸 / 소형 12칸)
+
+
+Q. 탑승권을 분실했습니다. 재발급이 되나요?
+A. 분실 했을 때에는 재발급이 되지 않습니다.
+
+
+Q. 예매를 했는데 환불이 되나요?
+A. 이용 시간이 경과하면 환불이 불가하며, 이용 시간 이전에 취소할 경우 취소 수수료가 부과됩니다. (2일 전 20%, 1일 전 30%, 당일 시간 전 50%)
+
+
+Q. 애완동물과 함께 탑승할 수 있나요?
+A. 안고 타실 수는 없으며, 케이지나 슬링백을 이용하여 탑승이 가능합니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('부산 해운대 요트투어', '주중/주말/공휴일가능', '관리자', '부산', '부산', '주간타임(대/소 공통)', '야간 타임 (대인)', '야간 타임 (소인)', '야간 타임 (대/소 공통 4인)', 15000, 25000, 15000, 75000, 'YachtTour_Thumbnail.jpg', 'YachtTour_Picture.jpg', 'Busan_YachtTour.jpg', '부산시 해운대구 해운대 해변로 84 (수영만요트경기장)', '
+[이용방법]
+원하시는 티켓 구매
+티켓 구매 후 1시간 뒤 유선으로 예약 필수
+*유선예약 : 010-8960-3888
+*현장 예약 현황에 따라서 원하시는 시간대에 이용이 어려울 수 있어 유선 문의 필수
+현장방문, 고객 성함 및 휴대폰번호 확인 후 이용
+
+[이용안내]
+1. 기상상황에 따라 변경, 취소 될 수 있으며 기상악화 경우 전액환불 가능합니다.
+2. 예약 인원에 따라 전후로 이용시간이 다시 조절 될 수 있습니다.
+3. 해당 티켓은 구매 후 유선 예약이 필수인 티켓 입니다.
+(미 예약시 티켓 이용이 불가한점 양해 바랍니다.)
+4. 티켓 구매 후 유선으로 이용일 및 이용시간 예약 필수
+기상악화로 인한 운항 취소시 전액 환불 되며, 취소 변경 모두 가능하십니다.
+
+업체번호 : 010-8960-3888
+운영시간 : 12시30분 ~ 23시30분
+문의가능시간 : 8시 ~ 24시
+휴   무 : 연중무휴
+주차여부 : 무료 주차가능
+무료입장 : 36개월 미만 (확인서류 지참 필수)', '
+Q. 예매를 했었는데 탑승 인원을 추가할 수 있나요?
+A. 유선상으로 미리 연락주시면 안내도와드립니다.
+
+Q. 보트는 몇 명까지 탈 수 있나요?
+A. 상품기준 4~5인을 기준으로 하고 있지만 추가 인원이 있을 시 연락주시면 안내해드립니다.
+
+
+Q. 석양을 볼 수 있는 시간에 예약하고 싶은데 가능한가요?
+A. 예약을 선착순으로 진행해드리기 때문에 조기 예약마감이 될 수도 있는 점 양해부탁드립니다.
+
+
+Q. 차를 타고 가는데 주변에 주차장 있나요?
+A. 인근에 무료 주차장이 있습니다. 편하게 이용하시면 됩니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('제주 아쿠아플라넷 종합이용권', '주중/주말/공휴일 당일사용가능', '관리자', '제주', '제주', '아쿠아플라넷 종합권 소인', '아쿠아플라넷 종합권 청소년', '아쿠아플라넷 종합권 성인', '아쿠아플라넷 종합권 4인 패밀리', 15000, 19500, 25000, 68000, 'AquaPlanet_Thumbnail.jpg', 'AquaPlanet_Picture.jpg', 'Jeju_AquaPlanet.jpg', '제주특별자치도 서귀포시 성산읍 섭지코지로 95', '
+[이용제한안내]
+1. 버스투어, 택시투어 등 기사/가이드를 동반하여 이용시 사용이 불가합니다.
+(렌터카 및 자가운전자만 이용 가능합니다.)
+2. 타 관광지쿠폰과 중복할인 불가합니다.
+관광지 업체 사정에 의해 사전통보없이 이용이 불가할수 있습니다.
+패키지에 포함 되어 있는 상품 외의 상품은 현장 추가 결제 후 이용바랍니다.
+레저 체험상품 이용시 현장 안전요원 판단하여 이용이 불가 할 수도있습니다.
+
+[이용정보]
+
+[관광지정보]
+※ 관광지마다 연령 기준이 상이하므로 미리 확인 후 구매 부탁드립니다※
+※ 패키지상품은 한 곳이라도 이용 시 부분 환불이 불가합니다※
+※ 여러장 구매 시 부분취소/분활사용 불가(예_3장 결제 시 1장만 환불불가)하니
+권종/수량 변경 시 전체 취소 후 재구매 하시기 바랍니다※', '
+Q. 애완동물과 함께 입장이 가능한가요?
+A. 애완동물은 전시생물 보호 및 관람환경유지를 위해 입장을 금하고 있습니다.
+
+
+Q. 입장시간은 어떻게 되나요?
+A. 아쿠아플라넷 제주는 연중무휴로 아래와 같이 운영이 되고 있습니다.
+   운영시간 : 9:30AM ~ 7:00PM
+   매표시간 : 9:30AM ~ 17:50PM
+   ※ 오션아레나 공연 4:50PM 마지막 공연 / 1일 4회
+
+
+Q. 중복할인이 되나요?
+A. 중복할인은 불가합니다.
+   다만 다양한 할인혜택 중 본인에게 가장 유리한 것을 이용하시면 됩니다.
+
+
+Q. 관람소요시간은 어떻게 되나요?
+A. 관람 예상 소요 시간은 아쿠아리움(수족관) 약 60분, 오션아레나(공연장) 약 40분, 미니언즈 전시관 약 60분으로 총 2시간 40분 내외입니다.
+   관람소요시간은 개인적인 편차가 있을 수 있습니다.
+   관람 중간 중간 다양한 공연과 체험프로그램 그리고 성산일출봉이 보이는 전망 좋은 야외테라스까지 즐기신다면 시간을 넉넉히 잡고 구경하시는 것이 좋습니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('제주 삼다수목장 승마 체험', '4가지 코스 중 선택가능', '관리자', '제주', '제주', '제주삼다수목장 기본코스', '제주삼다수목장 더블코스', '제주삼다수목장 목장코스', '제주삼다수목장 산책코스', 7000, 15000, 25000, 35000, 'SamdaArboretum_Thumbnail.jpg', 'SamdaArboretum_Picture.jpg', 'Jeju_SamdaArboretum.jpg', '제주특별자치도 제주시 비자림로 485-15', '
+[이용방법]
+①구매와 동시에 바코드가 발송됩니다.
+②전송받으신 바코드를 이용하시고자하는 관광지 매표소에 보여주시면 이용가능합니다.
+③실시간 바코드 발송 후, 구매하신 티켓은 자동 사용처리되며, 실제 관광지 이용에는 문제가 없습니다.
+
+[연령기준]
+성인 : 19세이상, 청소년 : 중,고등학생, 소인 : 36개월이상
+소인기준의 경우 업체별 전부 상이 하므로 상품별 업체기준을 확인 하시고 상품을 구매바랍니다.
+(소아 무료입장 기준에 해당되어 무료 입장을 할 경우 증빙서류를 지참하셔야 무료 입장 가능합니다.)
+
+[이용정보]
+
+[관광지정보]
+삼다수목장(구 제주관광승마장)
+• 주 소 : 제주특별자치도 제주시 비자림로 485-15
+• 연락처: 064-784-1441
+• 운영시간 : 하절기 : 17:30 이전 방문 고객 이용가능 /  동절기 : 16:30 이전 방문 고객 이용가능
+• 36개월이상 단독 탑승이 가능하나 안전요원 판단하에 위험요소가 있을경우 이용 불가 할 수 있습니다.
+• 우천시 혹은 안전에 이상이 우려될 경우 관리자의 판단으로 이용이 제한 될 수 있습니다
+• 운동화 착용 권장 (조리나 끈으로 묶는 샌들 착용하여 체험할 경우 사고위험이 있습니다)
+※ 코스안내
+-기본코스(약5분) : 원트랙 3바퀴 
+-더블코스(약10분) : 초원코스+원트랙 2바퀴
+-목장코스(약15분) : 초원코스+삼다수길(목장 크게 한바퀴)+원트랙 2바퀴', '
+Q. 티켓을 구매 후 따로 예약을 해야하나요?
+A. 별도 예약 없이 티켓 유효기간 내에 언제든 사용 가능합니다. 티켓 유효기간은 구매 후 30일입니다.
+
+
+Q. 미성년자도 단독으로 탑승할 수 있나요?
+A. 36개월 이상 단독 탑승이 가능하나 안전요원 판단하에 위험요소가 있을경우 이용 불가 할 수 있습니다.
+
+
+Q. 운영시간이 어떻게 되나요?
+A. 운영시간은 기상 악화, 특정 기념일, 시즌, 해당 관광지 측 사정에 따라 변경될 수 있습니다.
+우천시 혹은 안전에 이상이 우려될경우 관리자의 판단으로 이용이 제한 될 수도 있습니다.
+
+
+Q. 환불시 전액환불이 되나요?
+A. 당일 취소는 불가하며, 예약 1일 전까지 사용 및 개시하지 않은 티켓은 환불이 가능합니다.
+');
+
+
+
+
+
+
+INSERT INTO ACTIVITY (ACT_MAINTITLE, ACT_SUBTITLE, ACT_WRITER, CATEGORYCHECK, CATEGORY_NAME, ACT_OPTNAME1, ACT_OPTNAME2, ACT_OPTNAME3, ACT_OPTNAME4, ACT_OPTPRICE1, ACT_OPTPRICE2, ACT_OPTPRICE3, ACT_OPTPRICE4, ACT_THUMBIMGNAME, ACT_MAINPICTURENAME, ACT_INFORIMGNAME, ACT_ADDRESS, ACT_ANNOUNCEMENT, ACT_FAQ) 
+VALUES ('제주 윈드1947 카트테마파크', '온가족이 즐길 수 있는 액티비티', '관리자', '제주', '제주', '1인승 카트 3회전', '1인승 카트 6회전', '커플 2인승 카트 3회전', '커플 2인승 카트 6회전', 21000, 38500, 30000, 56000, 'Wind1947Kart_Thumbnail.jpg', 'Wind1947Kart_Picture.jpg', 'Jeju_Wind1947Kart.jpg', '제주특별자치도 서귀포시 토평공단로 78-27', '
+[이용방법] 
+1. 구매인원과 연령에 맞게 티켓을 구매 후 고객님 핸드폰으로 MMS 모바일 쿠폰이 발송되며
+MMS 모바일 쿠폰 발송은 구매 후 15분~20분 이내 바로 발송됩니다.
+MMS로 발송된 모바일 쿠폰은 하나의 바코드로 발송되며 관광지 인증 시 인원 일괄 인증처리됩니다.
+관광지 입장 인원을 나눠 이용 원하시는 고객님께서는 구매 시, 결제 자체를 나눠 결제 후 수령, 이용하셔야 합니다.
+(ex. 성인 2명, 소인 2명 일 때 각각 이용 일자가 상이하거나 인원을 나눠서 이용하실 경우
+성인 1명, 성인 1명, 소인 1명, 소인 1명 각각 나눠서 4번 구매하고 바코드를 4개로 전송받아야 합니다.)
+본 쿠폰의 경우 임의적인 타인 양도 및 재 판매 이용이 불가합니다.
+
+2. 전송받으신 쿠폰을 관광지 매표소에 제시
+
+[연령기준]
+성인 : 19세 이상, 청소년 : 중, 고등학생, 소인 : 업체별 상이
+(소아 무료입장 기준에 해당되어 무료입장을 할 경우 증빙서류를 지참하셔야 무료입장 가능합니다.)', '
+Q. 1, 2인승 카트 탑승기준은 어떻게 되나요?
+A. 1인승: 신장 150cm 이상 + 한국나이 14세 ~ 62세 (우천 시 17세 ~ 62세)
+   2인승: 한국나이 20~62세 (동승자: 30개월 ~ 65세)
+
+
+Q. 대기시간은 얼마나 걸리나요?
+A. 저희 윈드1947은 카트 탑승이 20분~30분 단위로 안전교육 및 탑승이 이루어 집니다.
+
+   1. 인터넷으로 구매를 하시더라도 시간예약은 따로 받지 않고 있습니다.
+   2. 현장에 도착하셔서 매표소에서 티케팅을 하시면 가장 가까운 시간으로 배정을 해 드립니다.
+   3. 도착하시는 시간 및 혼잡도에 따라 대기시간은 달라 질 수 있습니다.
+   4. 티켓에 적어드린 시간이 있더라도 대기시간을 단축시키기 위해 상황에 따라 앞당겨 질 수 있습니다.
+   ** 주차 후 매표소 이동, 탑승시간 까지 대기, 탑승장 이동후 안전장비 착용, 안전교육 등 시간이 걸릴 수 있으니
+   충분한 여유시간을 가지고 오시길 당부드립니다.
+   ** 저희 윈드1947 카트장은 고객님들의 대기시간을 최대한 단축시키기 위해 최선의 노력을 하고 있습니다.
+
+
+Q. 카트속도는 어떻게 되나요?
+A. 운전 경험이 없거나, 운전에 자신이 없는 이용객은 빠른 운행보다는 안전에 유의하여 운행바랍니다.
+
+
+Q. 예약관련 문의
+A. 온라인 예약이 마감될 경우에도 현장에서 발권이 가능하며, 홈페이지 예약건은 상시 운영되는 차량대수의 20~50%선으로 제한하고 있습니다.
+   20대 이상(단체)은 별도 문의 바랍니다.
+');
+
+
+
+
+
+
+================== REVIEW ==================
+CREATE TABLE REVIEW (
+REVIEW_NUM INT AUTO_INCREMENT PRIMARY KEY,
+REVIEW_CONTENT VARCHAR(500) NOT NULL,
+REVIEW_WRITER VARCHAR(30) NOT NULL,
+REVIEW_DATE DATE DEFAULT NOW() NOT NULL,
+ACT_NUM INT
+)DEFAULT CHARSET=UTF8;
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '김*룡', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '강*영', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '황*희', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '김*민', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '김*수', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '태*아', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '방*수', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '고*성', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '정*건', 1);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '이*원', 1);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '이*우', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '서*수', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '박*영', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '김*조', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '장*희', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '김*석', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '이*석', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '조*환', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '김*찬', 2);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '박*호', 2);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '이*영', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '정*수', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '김*영', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '강*서', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '이*호', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '박*성', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '손*민', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '조*희', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '차*민', 3);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '이*성', 3);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '박*영', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '김*지', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '장*희', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '전*애', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '양*현', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '김*수', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '김*우', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '박*원', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '최*정', 4);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '김*진', 4);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '박*수', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '김*진', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '이*진', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '장*수', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '이*수', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '손*희', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '김*영', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '박*현', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '김*현', 5);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '신*수', 5);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '서*희', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '강*원', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '정*원', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '임*웅', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '김*희', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '홍*수', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '이*원', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '김*중', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '정*현', 6);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '김*승', 6);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '나*희', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '김*성', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '김*희', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '이*진', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '김*서', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '박*훈', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '김*리', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '왕*현', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '신*현', 7);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '박*빈', 7);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '김*만', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '장*희', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '김*연', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '조*혜', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '이*진', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '김*수', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '박*진', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '홍*찬', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '김*정', 8);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '박*웅', 8);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '김*선', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '박*진', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '배*서', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '박*식', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '박*검', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '정*인', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '강*빈', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '김*국', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '양*형', 9);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '양*찬', 9);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '강*원', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '오*식', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '기*수', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '이*호', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '정*규', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '홍*주', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '김*린', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '이*지', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '신*윤', 10);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '원*성', 10);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '김*진', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '이*훈', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '김*호', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '이*진', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '이*호', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '박*휘', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '이*재', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '김*희', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '박*홍', 11);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '김*모', 11);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '이*숙', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '천*이', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '김*열', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '박*윤', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '김*철', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '강*동', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '김*동', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '장*호', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '김*철', 12);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '이*민', 12);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '민*훈', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '오*경', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '김*원', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '정*채', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '배*지', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '안*모', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '조*호', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '진*호', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '구*수', 13);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '박*영', 13);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '최*규', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '임*진', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '이*해', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '양*진', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '최*원', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '김*동', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '김*현', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '김*리', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '나*빈', 14);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '정*수', 14);
+
+
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('약간 할인 안받은 느낌이었는데 그래도 편리하게 잘 사용하였습니다. 다음번에도 또 도움 받는 앱으로 저장 합니다.', '김*영', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('트립온 덕분에 싸게 구매했어요~ 현장에서 구매하려니 너무 비싸고, 57% 카드사 할인 리스트는 많았는데 정작 되는게 없더군요 ㅠ 하지만 클룩 포인트 쓰고, 이벤트할인 받고 1인당 3만원으로 결제해서 기분좋게 즐기고 왔습니다. 표도 결제하고 거의 5-10분 내에 왔어요 ㅎㅎ', '진*수', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('재밋게놀다가용 ㅋㅋㅋ 진짜재밋고 시간절약도됫네오 ㅋㅋ 좋아요^^ㅋㅋㅋ', '김*룡', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('가족과 함께 즐기다왔어요. 생각햇던것보다 훨씬 재밋었고..오래기다리지 않아좋앗어요^^', '강*욱', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('한번에 쑥 게이트를 통과하니 줄서고 있는 사람들의 부러운 눈빛. 여유롭게 즐길 준비 되셨나요? 미리 예약해서 신속히 잘 사용해서 넘 즐거웠어요', '장*연', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('신용카드를 안쓰는 부부인데 할인혜택이 전무한 상황에서 요기나게 썼습니다. 구매시 취소가 안된다는게 좀 염려스러웠지만 재밌게 잘 놀고 왔습니다.', '정*진', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('시험 끝나고 친구랑 가서 재밌게 놀다왔어요!! 원가보다 싼 가격으로 가서 더 좋았습니다 다음에도 또 이용할거같아요', '신*우', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘다녀왔습니다 고맙습니다!!', '김*욱', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('저렴하게 잘 갔다왔어요~~ 할로윈 시즌이라서 그런지 사람이 생각보다 많았네요', '김*직', 15);
+INSERT INTO REVIEW (REVIEW_CONTENT, REVIEW_WRITER, ACT_NUM) VALUES ('매표소도 안들리고 바로 입장할 수 있어서 너무 편하고 좋았습니다 또 이용할듯 해요~~', '오*은', 15);
+
