@@ -76,7 +76,7 @@ public class PersonalInformationController {
 		System.out.println(phoneNumberAuthentication);
 		System.out.println(phoneNumber);
 		
-//		personalInformationServiceimpl.PhoneNumberAuthentication(phoneNumberAuthentication, phoneNumber);
+		personalInformationServiceimpl.PhoneNumberAuthentication(phoneNumberAuthentication, phoneNumber);
 		
 		return "" + phoneNumberAuthentication;
 	}

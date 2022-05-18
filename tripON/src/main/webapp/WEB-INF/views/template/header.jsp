@@ -230,7 +230,7 @@
                 		// 로그인 하지 않았을 때 보여지는 화면
                 		if(userId == null){
                 	%>
-            				<a class="tet" href="goInfo_managementPage"><span class="spt">로그인하기</span></a>
+            				<a class="tet" href="login"><span class="spt">로그인하기</span></a>
             				<div class="btn-set">
             		
             		<% 

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<% pageContext.setAttribute("ln","\n"); %>
 <c:set var="msg1" value=""/>
 <c:set var="msg2" value=""/>
 <c:set var="msg3" value=""/>
@@ -130,7 +132,7 @@ $(document).ready(function(){
 		                            </div>
 		                        </div>
 		                        <div class="panel">
-		                            <p>${faq.faq_content}</p>
+		                            <p><c:out value="${fn:replace(faq.faq_content, ln ,'<br>')}" escapeXml="false"></c:out></p>
 		                        </div>
 		                    </li>
 		                </c:forEach>

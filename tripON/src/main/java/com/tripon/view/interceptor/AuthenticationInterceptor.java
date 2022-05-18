@@ -71,6 +71,13 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter{
 	       }
 	    }
 	    
+	    if(request.getRequestURI().contains("/admin/")) {
+		    Object obj1 = session.getAttribute("isSuper");
+		    if(obj1 == null || !obj1.equals("Y")) {
+		    		response.sendRedirect(request.getContextPath() + "/error/error");
+		    }
+	    }
+	    
 		// 세션 있으면, 컨트롤러 타게함.
 		return true;
 	}

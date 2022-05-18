@@ -200,7 +200,7 @@ public class UserController {
 		
 		System.out.println("아이디 : " + vo.getKakao_mem_id());        // 1234567899
 		System.out.println("비밀번호 : " + vo.getKakao_mem_pw());      // 1234567899
-		System.out.println("닉네임 : " + vo.getKakao_mem_nickname());  // 쫄리✨
+		System.out.println("닉네임 : " + vo.getKakao_mem_nickname());  // 닉넴
 		System.out.println("이메일 : " + vo.getKakao_mem_email());     // undefined
 		
 		
@@ -357,7 +357,7 @@ public class UserController {
 		// 2단계 네이버 로그인
 		
 		System.out.println("2단계 객체 회원이름 : " + vo.getNaver_mem_username()); // 권소현
-		System.out.println("2단계 객체 닉네임 : " + vo.getNaver_mem_nickname());   // 쫄리
+		System.out.println("2단계 객체 닉네임 : " + vo.getNaver_mem_nickname());   // 닉넴
 		System.out.println("2단계 객체 이메일주소 : " + vo.getNaver_mem_email());  // thgus@naver.com
 		
 		// 네이버로그인 있는 회원인지 조회 
@@ -411,7 +411,7 @@ public class UserController {
 			
 			// ▶ 회원정보 세션 설정
 			System.out.println("3단계 객체 회원이름 : " + vo.getNaver_mem_username()); // 권소현
-			System.out.println("3단계 객체 닉네임 : " + uv.getMem_id());  // 쫄리
+			System.out.println("3단계 객체 닉네임 : " + uv.getMem_id());  // 닉넴
 			
 			session.setAttribute("userId", uv.getMem_id());       
 			session.setAttribute("userName", vo.getNaver_mem_username());  

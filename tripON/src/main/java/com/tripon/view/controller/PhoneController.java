@@ -25,7 +25,7 @@ public class PhoneController {
 		System.out.println(randomNumber);
 		
 		// ▶ 실제 서비스에서는 해당 주석 풀어주세요.
-		// testService.certifiedPhoneNumber(usertPhoneNumber, randomNumber);
+		testService.certifiedPhoneNumber(usertPhoneNumber, randomNumber);
 		
 		return Integer.toString(randomNumber);
 	}

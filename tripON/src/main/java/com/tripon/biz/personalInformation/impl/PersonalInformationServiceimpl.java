@@ -46,8 +46,8 @@ public class PersonalInformationServiceimpl implements PersonalInformationServic
 	@Override
 	public void PhoneNumberAuthentication(int certificateNumber, String phoneNumber) {
 		
-        String api_key = "NCSMKF09KIUQMPYU";
-        String api_secret = "ACGVMTUXUBMEIONJRBLPNMLNWPH1X3GM";
+        String api_key = "NCSXGWJZUVKUJYCY";
+        String api_secret = "99YIVUHHW1BYAPRZEKZZI4QYUQ1PZUH4";
         Message coolsms = new Message(api_key, api_secret);
     
         /*
@@ -56,7 +56,7 @@ public class PersonalInformationServiceimpl implements PersonalInformationServic
          */
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("to", phoneNumber); // 수신번호
-        map.put("from", "01089594573");
+        map.put("from", "01029952928");
         
         map.put("text", "[tripON] 인증번호 " + "[" + certificateNumber + "]" + "를 입력해주세요."); // 문자내용
         map.put("type", "sms"); // 문자 타입

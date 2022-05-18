@@ -37,10 +37,11 @@ public class NoticeController {
 		MultipartFile[] uploadFile = vo.getUploadFile();
 		if(!uploadFile[0].getOriginalFilename().trim().equals("")) {
 			
+			// ** 혹시 호스팅할 때 상대경로로 잘 안되면 아래의 절대경로를 사용해 볼 것. **
 			// 아래 realPath는 tomcat에서 구동할 때 읽을 수 있는 상대경로이므로 서버를 구동시켜 사용해야만 제대로 인식함.
-			String realPath = request.getSession().getServletContext().getRealPath("/resources/attachments/");
+//			String realPath = request.getSession().getServletContext().getRealPath("/resources/attachments/");
 			// 이클립스로 테스트 시에는 아래 realPath에 원하는 위치의 절대경로를 명시해야 업로드 됨.
-			// String realPath = "C:/user/swork/tripON/src/main/webapp/resources/attachments/";
+			 String realPath = "C:/server/apache-tomcat-9.0.62/webapps/tripON/resources/attachments/";
 			
 			
 			System.out.println(realPath);
@@ -70,10 +71,11 @@ public class NoticeController {
 		MultipartFile[] uploadFile = vo.getUploadFile();
 		if(!uploadFile[0].getOriginalFilename().trim().equals("")) {
 			
+			// ** 혹시 호스팅할 때 상대경로로 잘 안되면 아래의 절대경로를 사용해 볼 것. **
 			// 아래 realPath는 tomcat에서 구동할 때 읽을 수 있는 상대경로이므로 서버를 구동시켜 사용해야만 제대로 인식함.
-			String realPath = request.getSession().getServletContext().getRealPath("/resources/attachments/");
+//			String realPath = request.getSession().getServletContext().getRealPath("/resources/attachments/");
 			// 이클립스로 테스트 시에는 아래 realPath에 원하는 위치의 절대경로를 명시해야 업로드 됨.
-			// String realPath = "C:/user/swork/tripON/src/main/webapp/resources/attachments/";
+			 String realPath = "C:/server/apache-tomcat-9.0.62/webapps/tripON/resources/attachments/";
 			
 			System.out.println(realPath);
 			String filenames = "";

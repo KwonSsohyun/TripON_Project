@@ -120,7 +120,7 @@ $(document).ready(function(){
            		
            		} else {
            			code2 = data;
-           			alert(code2);
+//            			alert(code2);
            		}
            	}
 		});

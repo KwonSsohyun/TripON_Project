@@ -146,7 +146,7 @@
 	        		contentType: 'application/json; charset=UTF-8',
 	        		success: function(data) {
 	        			authenticationNumber = data;
-	        			alert(authenticationNumber);
+// 	        			alert(authenticationNumber);
 	        			$('.certification-group-2').show();
 	        			$('.certification-group-1').hide();
 	        			$(pi_icf_2).text('* 인증번호가 전송되었습니다.');

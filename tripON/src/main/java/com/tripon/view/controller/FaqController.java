@@ -166,5 +166,11 @@ public class FaqController {
 		
 		return path;
 	}
+	@RequestMapping(value="/error/error", method=RequestMethod.GET)
+	public String path04(HttpServletRequest request) {
+		System.out.println("/error/error 컨트롤러");
+		
+		return "error/error";
+	}
 	
 }

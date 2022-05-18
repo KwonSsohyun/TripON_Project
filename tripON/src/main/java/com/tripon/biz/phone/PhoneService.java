@@ -15,8 +15,8 @@ public class PhoneService {
 		
 		System.out.println("실제 전송로직 : " + userPhoneNumber);
 		
-		String api_key = "COOLSMS에서 발급받은 키";       // "COOLSMS에서 발급받은 키"
-		String api_secret = "COOLSMS에서 발급받은 값";    // "COOLSMS에서 발급받은 값"
+		String api_key = "NCSXGWJZUVKUJYCY";                    // "COOLSMS에서 발급받은 키"
+		String api_secret = "99YIVUHHW1BYAPRZEKZZI4QYUQ1PZUH4"; // "COOLSMS에서 발급받은 값"
 		
 		Message coolsms = new Message(api_key, api_secret);
 		
@@ -24,7 +24,7 @@ public class PhoneService {
 		HashMap<String, String> params = new HashMap<String, String>();
 		
 		params.put("to", userPhoneNumber);
-		params.put("from", "01012345678");
+		params.put("from", "01029952928");
 		
 		// 발신 전화번호. 테스트시에는 발신, 수신 둘다 본인 번호로 하면 됨
 		params.put("type", "SMS");

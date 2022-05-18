@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<% pageContext.setAttribute("ln", "\n"); %>
 <c:if test="${userNoticeTotal.total ne 0 or userNoticeList[0].listCnt ne null}">
 	<c:set var="rt" value="${userNoticeTotal.total}"/>
 	<c:set var="lc" value="${userNoticeList[0].listCnt}"/>
@@ -97,7 +98,7 @@ $(document).ready(function(){
 		                             </div>
 		                         </div>
 		                         <div class="panel">
-		                             <p>${notice.ntc_content}</p>
+		                             <p><c:out value="${fn:replace(notice.ntc_content, ln, '<br>')}" escapeXml="false"/></p>
 		                         </div>
 		                     </li>
 		                 </c:forEach>
